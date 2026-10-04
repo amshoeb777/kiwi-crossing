@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cross the Ditch: compare NZ and Australian living costs, learn the moving process for each state, and build a dated plan for your move.">
+<meta name="description" content="Kiwi Crossing: compare NZ and Australian living costs, learn the moving process for each state, and build a dated plan for your move.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#22584a">
-<meta name="application-name" content="Cross the Ditch">
+<meta name="application-name" content="Kiwi Crossing">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Cross the Ditch">
+<meta name="apple-mobile-web-app-title" content="Kiwi Crossing">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<title>Cross the Ditch · Planning a move from New Zealand to Australia</title>
+<title>Kiwi Crossing · Planning a move from New Zealand to Australia</title>
 <style>
 /* ===================== THEME ===================== */
 /* THEME:BEGIN (tools/apply_theme.py replaces this block) */
@@ -159,6 +159,14 @@ details>*:last-child{margin-bottom:12px}
 .kpi .lbl{font-size:.85rem;color:var(--muted);font-weight:600}
 .summary{font-size:1.08rem;background:var(--primary-soft);border-radius:12px;padding:12px 14px;margin:8px 0 12px}
 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.med-tbl{overflow-x:auto;margin:6px 0 12px}
+.med-tbl table{font-size:.92rem;min-width:280px}
+.med-tbl th,.med-tbl td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+.med-tbl caption{text-align:left;font-weight:700;padding:4px 0 6px}
+.med-example{background:var(--primary-soft);border-radius:12px;padding:10px 14px;margin:8px 0 12px}
+.med-example ul{margin:6px 0 0}
+#mv-medicare>summary{font-size:1.02rem}
+#mv-medicare .src{font-size:.82rem}
 th,td{padding:8px 8px;text-align:left;border-bottom:1px solid var(--border);vertical-align:middle}
 th{font-size:.85rem;color:var(--muted);font-weight:700}
 td.num,th.num{text-align:right}
@@ -409,6 +417,8 @@ html:has(body.story-open){overscroll-behavior:none}
 .snap dt{font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f0dfb8}
 .snap dd{margin:2px 0 0;font-size:1.12rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.25}
 .snap dd small{display:block;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.86)}
+.snap .snap-reasons{margin:12px 0 0;font-weight:700;font-size:.98rem;line-height:1.35}
+.snap .snap-reasons span{margin-right:6px;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f0dfb8}
 .snap .snap-verdict{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;background:#e6cc98;color:#163d34;border-radius:16px;padding:12px 14px;font-weight:700}
 .snap .snap-verdict b{font-size:1.3rem;font-weight:800}
 .snap .snap-foot{margin:12px 0 0;font-size:.74rem;color:rgba(255,255,255,.8)}
@@ -425,10 +435,10 @@ html:has(body.story-open){overscroll-behavior:none}
 <header class="app">
   <div class="bar">
     <!-- BRAND:BEGIN -->
-    <a class="brand" href="#intake" aria-label="Cross the Ditch home">
+    <a class="brand" href="#intake" aria-label="Kiwi Crossing home">
       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true" focusable="false" viewBox="0 0 64 64"><defs><linearGradient id="bmt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#317363"/><stop offset="1" stop-color="#1C4A3F"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#bmt)"/><path d="M10 44.5c5 0 7-5 11-5s6 5 11 5 7-5 11-5 6 5 11 5" fill="none" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/><circle cx="16.5" cy="31" r="4.2" fill="#e6cc98"/><circle cx="30" cy="24" r="5.3" fill="#e6cc98"/><circle cx="46" cy="20.5" r="6.8" fill="#e6cc98"/></svg>
-      <svg class="wordmark" viewBox="0 0 265.24 40.00" width="126" height="19" aria-hidden="true" focusable="false"><path d="M11.88 34.03Q8.69 34.03 6.31 32.77Q3.94 31.52 2.64 29.19Q1.34 26.87 1.34 23.72Q1.34 21.35 2.08 19.47Q2.81 17.59 4.19 16.27Q5.57 14.95 7.52 14.25Q9.47 13.55 11.88 13.55Q13.12 13.55 14.53 13.85Q15.94 14.15 17.3 14.86Q18.09 15.25 18.38 15.9Q18.68 16.54 18.59 17.25Q18.5 17.96 18.1 18.5Q17.69 19.05 17.05 19.22Q16.41 19.4 15.6 19Q14.84 18.58 14.02 18.37Q13.21 18.16 12.47 18.16Q11.27 18.16 10.36 18.54Q9.45 18.91 8.82 19.62Q8.19 20.32 7.86 21.36Q7.53 22.39 7.53 23.75Q7.53 26.39 8.82 27.91Q10.11 29.42 12.47 29.42Q13.21 29.42 14.01 29.23Q14.81 29.04 15.6 28.61Q16.41 28.21 17.04 28.4Q17.66 28.59 18.05 29.13Q18.45 29.68 18.51 30.38Q18.57 31.09 18.26 31.74Q17.95 32.38 17.19 32.74Q15.86 33.43 14.49 33.73Q13.12 34.03 11.88 34.03Z M24.16 33.95Q22.65 33.95 21.85 33.15Q21.06 32.36 21.06 30.87V16.68Q21.06 15.19 21.83 14.41Q22.6 13.63 24.01 13.63Q25.42 13.63 26.19 14.41Q26.95 15.19 26.95 16.68V18.76H26.55Q27.02 16.36 28.68 15.04Q30.33 13.72 32.94 13.55Q33.93 13.5 34.46 14.06Q35 14.62 35.06 15.96Q35.11 17.19 34.54 17.92Q33.97 18.64 32.6 18.79L31.7 18.87Q29.42 19.08 28.31 20.2Q27.2 21.33 27.2 23.43V30.87Q27.2 32.36 26.42 33.15Q25.65 33.95 24.16 33.95Z M46.21 34.03Q43.06 34.03 40.72 32.79Q38.38 31.55 37.08 29.23Q35.78 26.92 35.78 23.77Q35.78 21.4 36.52 19.52Q37.25 17.64 38.62 16.3Q40 14.95 41.92 14.25Q43.84 13.55 46.21 13.55Q49.38 13.55 51.71 14.79Q54.04 16.03 55.34 18.32Q56.64 20.62 56.64 23.77Q56.64 26.15 55.91 28.04Q55.17 29.93 53.8 31.28Q52.42 32.63 50.5 33.33Q48.58 34.03 46.21 34.03ZM46.21 29.51Q47.5 29.51 48.48 28.88Q49.45 28.26 50.01 26.99Q50.56 25.72 50.56 23.77Q50.56 20.84 49.35 19.45Q48.15 18.07 46.21 18.07Q44.93 18.07 43.95 18.68Q42.97 19.29 42.42 20.55Q41.86 21.82 41.86 23.77Q41.86 26.68 43.07 28.1Q44.27 29.51 46.21 29.51Z M67.45 34.03Q65.69 34.03 63.83 33.71Q61.96 33.39 60.46 32.63Q59.64 32.23 59.3 31.61Q58.96 31 59 30.35Q59.04 29.7 59.42 29.2Q59.79 28.69 60.42 28.5Q61.04 28.31 61.8 28.63Q63.43 29.32 64.8 29.6Q66.18 29.88 67.48 29.88Q69.18 29.88 69.98 29.33Q70.77 28.78 70.77 27.9Q70.77 27.13 70.25 26.73Q69.72 26.32 68.72 26.15L64.51 25.4Q62.03 24.94 60.7 23.58Q59.36 22.21 59.36 20.03Q59.36 18.04 60.48 16.59Q61.6 15.13 63.57 14.34Q65.55 13.55 68.1 13.55Q69.88 13.55 71.39 13.88Q72.9 14.21 74.33 14.94Q75.05 15.28 75.34 15.88Q75.63 16.47 75.53 17.12Q75.43 17.77 75.04 18.28Q74.65 18.79 74.02 18.96Q73.39 19.12 72.59 18.79Q71.31 18.21 70.22 17.95Q69.14 17.7 68.18 17.7Q66.37 17.7 65.56 18.26Q64.75 18.82 64.75 19.73Q64.75 20.39 65.21 20.85Q65.68 21.31 66.64 21.47L70.85 22.22Q73.44 22.68 74.8 23.98Q76.16 25.29 76.16 27.51Q76.16 30.58 73.78 32.3Q71.4 34.03 67.45 34.03Z M86.73 34.03Q84.97 34.03 83.11 33.71Q81.24 33.39 79.74 32.63Q78.92 32.23 78.58 31.61Q78.24 31 78.28 30.35Q78.32 29.7 78.7 29.2Q79.07 28.69 79.7 28.5Q80.32 28.31 81.08 28.63Q82.71 29.32 84.08 29.6Q85.46 29.88 86.76 29.88Q88.46 29.88 89.26 29.33Q90.05 28.78 90.05 27.9Q90.05 27.13 89.53 26.73Q89 26.32 88 26.15L83.79 25.4Q81.31 24.94 79.98 23.58Q78.64 22.21 78.64 20.03Q78.64 18.04 79.76 16.59Q80.88 15.13 82.85 14.34Q84.83 13.55 87.38 13.55Q89.16 13.55 90.67 13.88Q92.18 14.21 93.61 14.94Q94.33 15.28 94.62 15.88Q94.91 16.47 94.81 17.12Q94.71 17.77 94.32 18.28Q93.93 18.79 93.3 18.96Q92.67 19.12 91.87 18.79Q90.59 18.21 89.5 17.95Q88.42 17.7 87.46 17.7Q85.65 17.7 84.84 18.26Q84.03 18.82 84.03 19.73Q84.03 20.39 84.49 20.85Q84.96 21.31 85.92 21.47L90.13 22.22Q92.72 22.68 94.08 23.98Q95.44 25.29 95.44 27.51Q95.44 30.58 93.06 32.3Q90.68 34.03 86.73 34.03Z" fill="currentColor"/><path d="M116.53 33.98Q114.1 33.98 112.47 33.13Q110.84 32.27 110.05 30.64Q109.25 29.01 109.25 26.62V17.19H106.84Q106.04 17.19 105.6 16.77Q105.16 16.36 105.16 15.64Q105.16 14.9 105.6 14.5Q106.04 14.1 106.84 14.1H109.25V9.95Q109.25 8.94 109.79 8.42Q110.32 7.9 111.29 7.9Q112.26 7.9 112.77 8.42Q113.29 8.94 113.29 9.95V14.1H117.96Q118.77 14.1 119.2 14.5Q119.64 14.9 119.64 15.64Q119.64 16.36 119.2 16.77Q118.77 17.19 117.96 17.19H113.29V26.32Q113.29 28.43 114.19 29.52Q115.09 30.6 117.13 30.6Q117.86 30.6 118.38 30.46Q118.91 30.32 119.3 30.29Q119.71 30.27 119.99 30.57Q120.27 30.86 120.27 31.71Q120.27 32.33 120.05 32.84Q119.84 33.34 119.27 33.54Q118.79 33.7 117.98 33.84Q117.17 33.98 116.53 33.98Z M124.76 33.9Q123.79 33.9 123.27 33.36Q122.75 32.82 122.75 31.82V7.15Q122.75 6.14 123.27 5.62Q123.79 5.1 124.76 5.1Q125.73 5.1 126.26 5.62Q126.79 6.14 126.79 7.15V18.25H126.25Q127.11 16.01 129 14.87Q130.89 13.72 133.31 13.72Q135.66 13.72 137.18 14.58Q138.71 15.45 139.47 17.19Q140.23 18.93 140.23 21.56V31.82Q140.23 32.82 139.71 33.36Q139.19 33.9 138.22 33.9Q137.25 33.9 136.72 33.36Q136.19 32.82 136.19 31.82V21.78Q136.19 19.27 135.22 18.11Q134.25 16.96 132.17 16.96Q129.72 16.96 128.25 18.49Q126.79 20.02 126.79 22.57V31.82Q126.79 33.9 124.76 33.9Z M154.57 33.98Q151.38 33.98 149.07 32.75Q146.76 31.52 145.51 29.26Q144.25 26.99 144.25 23.89Q144.25 20.85 145.48 18.57Q146.7 16.3 148.87 15.01Q151.03 13.72 153.81 13.72Q155.83 13.72 157.43 14.39Q159.04 15.06 160.17 16.31Q161.3 17.57 161.9 19.36Q162.5 21.15 162.5 23.4Q162.5 24.06 162.08 24.41Q161.66 24.75 160.88 24.75H147.44V22.28H159.74L159.09 22.84Q159.09 20.83 158.5 19.44Q157.91 18.06 156.77 17.32Q155.63 16.58 153.94 16.58Q152.08 16.58 150.77 17.45Q149.46 18.32 148.78 19.88Q148.11 21.43 148.11 23.52V23.77Q148.11 27.26 149.77 29.04Q151.44 30.82 154.6 30.82Q155.8 30.82 157.13 30.52Q158.46 30.21 159.68 29.44Q160.36 29.03 160.9 29.07Q161.44 29.11 161.78 29.43Q162.11 29.76 162.19 30.23Q162.28 30.71 162.04 31.22Q161.81 31.72 161.2 32.11Q159.85 33.03 158.04 33.5Q156.22 33.98 154.57 33.98Z" fill="var(--brand-b)"/><path d="M182.78 34.03Q180.25 34.03 178.3 32.79Q176.36 31.55 175.27 29.23Q174.18 26.92 174.18 23.77Q174.18 20.59 175.27 18.31Q176.36 16.03 178.3 14.79Q180.24 13.55 182.78 13.55Q185.11 13.55 186.9 14.68Q188.69 15.8 189.32 17.61H188.86V8.1Q188.86 6.61 189.64 5.83Q190.42 5.05 191.87 5.05Q193.32 5.05 194.11 5.83Q194.9 6.61 194.9 8.1V30.87Q194.9 32.36 194.14 33.15Q193.37 33.95 191.92 33.95Q190.47 33.95 189.7 33.15Q188.93 32.36 188.93 30.87V28.15L189.37 29.73Q188.79 31.67 186.98 32.85Q185.16 34.03 182.78 34.03ZM184.61 29.51Q185.9 29.51 186.88 28.88Q187.85 28.26 188.41 26.99Q188.96 25.72 188.96 23.77Q188.96 20.84 187.75 19.45Q186.55 18.07 184.61 18.07Q183.33 18.07 182.35 18.68Q181.37 19.29 180.82 20.55Q180.26 21.82 180.26 23.77Q180.26 26.68 181.47 28.1Q182.67 29.51 184.61 29.51Z M202.18 33.92Q200.73 33.92 199.95 33.06Q199.18 32.2 199.18 30.63V16.94Q199.18 15.35 199.95 14.5Q200.73 13.66 202.18 13.66Q203.63 13.66 204.43 14.5Q205.22 15.35 205.22 16.94V30.63Q205.22 32.2 204.45 33.06Q203.67 33.92 202.18 33.92ZM202.18 10.38Q200.53 10.38 199.63 9.58Q198.73 8.79 198.73 7.35Q198.73 5.88 199.63 5.1Q200.53 4.32 202.18 4.32Q203.86 4.32 204.75 5.1Q205.63 5.88 205.63 7.35Q205.63 8.79 204.75 9.58Q203.86 10.38 202.18 10.38Z M219.13 34.03Q216.35 34.03 214.5 33.12Q212.65 32.21 211.76 30.44Q210.86 28.66 210.86 26.01V18.46H209.14Q208.02 18.46 207.41 17.88Q206.79 17.29 206.79 16.22Q206.79 15.13 207.41 14.55Q208.02 13.98 209.14 13.98H210.86V10.9Q210.86 9.41 211.65 8.63Q212.44 7.85 213.89 7.85Q215.34 7.85 216.12 8.63Q216.9 9.41 216.9 10.9V13.98H220.66Q221.8 13.98 222.41 14.55Q223.01 15.13 223.01 16.22Q223.01 17.29 222.41 17.88Q221.8 18.46 220.66 18.46H216.9V25.75Q216.9 27.45 217.67 28.28Q218.44 29.12 220.15 29.12Q220.76 29.12 221.28 29Q221.8 28.88 222.23 28.85Q222.78 28.81 223.15 29.19Q223.51 29.58 223.51 30.83Q223.51 31.82 223.2 32.54Q222.89 33.26 222.09 33.56Q221.54 33.75 220.64 33.89Q219.75 34.03 219.13 34.03Z M234.6 34.03Q231.41 34.03 229.03 32.77Q226.66 31.52 225.36 29.19Q224.06 26.87 224.06 23.72Q224.06 21.35 224.8 19.47Q225.53 17.59 226.91 16.27Q228.29 14.95 230.24 14.25Q232.19 13.55 234.6 13.55Q235.84 13.55 237.25 13.85Q238.66 14.15 240.02 14.86Q240.81 15.25 241.1 15.9Q241.4 16.54 241.31 17.25Q241.22 17.96 240.82 18.5Q240.41 19.05 239.77 19.22Q239.13 19.4 238.32 19Q237.56 18.58 236.74 18.37Q235.93 18.16 235.19 18.16Q233.99 18.16 233.08 18.54Q232.17 18.91 231.54 19.62Q230.91 20.32 230.58 21.36Q230.25 22.39 230.25 23.75Q230.25 26.39 231.54 27.91Q232.83 29.42 235.19 29.42Q235.93 29.42 236.73 29.23Q237.53 29.04 238.32 28.61Q239.13 28.21 239.76 28.4Q240.38 28.59 240.77 29.13Q241.17 29.68 241.23 30.38Q241.29 31.09 240.98 31.74Q240.67 32.38 239.91 32.74Q238.58 33.43 237.21 33.73Q235.84 34.03 234.6 34.03Z M246.78 33.95Q245.33 33.95 244.55 33.15Q243.78 32.36 243.78 30.87V8.1Q243.78 6.61 244.55 5.83Q245.33 5.05 246.78 5.05Q248.23 5.05 249.03 5.83Q249.82 6.61 249.82 8.1V17.66H249.23Q250.15 15.66 251.97 14.61Q253.79 13.55 256.1 13.55Q258.46 13.55 259.98 14.45Q261.5 15.35 262.26 17.18Q263.02 19.01 263.02 21.82V30.87Q263.02 32.36 262.25 33.15Q261.47 33.95 260.02 33.95Q258.57 33.95 257.78 33.15Q256.98 32.36 256.98 30.87V22.08Q256.98 20.04 256.24 19.13Q255.5 18.22 253.99 18.22Q252.09 18.22 250.95 19.43Q249.82 20.63 249.82 22.64V30.87Q249.82 33.95 246.78 33.95Z" fill="currentColor"/></svg>
-      <span class="sr-only">Cross the Ditch</span>
+      <svg class="wordmark" viewBox="0 0 241.08 40.00" width="115" height="19" aria-hidden="true" focusable="false"><path d="M5.34 33.95Q3.89 33.95 3.11 33.15Q2.34 32.36 2.34 30.87V8.1Q2.34 6.61 3.11 5.83Q3.89 5.05 5.34 5.05Q6.79 5.05 7.59 5.83Q8.38 6.61 8.38 8.1V22.1H8.46L14.23 15.65Q15.12 14.65 15.85 14.14Q16.58 13.63 17.83 13.63Q19.09 13.63 19.75 14.27Q20.42 14.9 20.44 15.82Q20.45 16.73 19.65 17.66L13.51 24.47V22.18L20.3 30.04Q21.1 30.97 20.99 31.88Q20.89 32.79 20.16 33.37Q19.43 33.95 18.31 33.95Q16.95 33.95 16.14 33.44Q15.34 32.93 14.46 31.86L8.46 25.13H8.38V30.87Q8.38 33.95 5.34 33.95Z M27.26 33.92Q25.81 33.92 25.03 33.06Q24.26 32.2 24.26 30.63V16.94Q24.26 15.35 25.03 14.5Q25.81 13.66 27.26 13.66Q28.71 13.66 29.51 14.5Q30.3 15.35 30.3 16.94V30.63Q30.3 32.2 29.53 33.06Q28.75 33.92 27.26 33.92ZM27.26 10.38Q25.61 10.38 24.71 9.58Q23.81 8.79 23.81 7.35Q23.81 5.88 24.71 5.1Q25.61 4.32 27.26 4.32Q28.94 4.32 29.83 5.1Q30.71 5.88 30.71 7.35Q30.71 8.79 29.83 9.58Q28.94 10.38 27.26 10.38Z M42.64 33.95Q41.45 33.95 40.6 33.36Q39.75 32.78 39.23 31.54L33.59 17.55Q33.16 16.46 33.31 15.58Q33.46 14.7 34.17 14.17Q34.88 13.63 36.1 13.63Q37.15 13.63 37.83 14.13Q38.5 14.64 39.02 16.05L43.38 27.77H42.49L47.02 15.53Q47.38 14.55 47.99 14.09Q48.61 13.63 49.6 13.63Q50.61 13.63 51.23 14.11Q51.85 14.59 52.18 15.53L56.68 27.77H55.9L60.28 15.88Q60.77 14.58 61.52 14.11Q62.27 13.63 63.14 13.63Q64.29 13.63 64.91 14.19Q65.53 14.76 65.62 15.64Q65.72 16.52 65.28 17.57L59.7 31.53Q59.21 32.74 58.34 33.34Q57.48 33.95 56.29 33.95Q55.1 33.95 54.24 33.34Q53.38 32.74 52.9 31.53L48.07 19.05H50.66L46.01 31.47Q45.53 32.73 44.69 33.34Q43.85 33.95 42.64 33.95Z M71.62 33.92Q70.17 33.92 69.39 33.06Q68.62 32.2 68.62 30.63V16.94Q68.62 15.35 69.39 14.5Q70.17 13.66 71.62 13.66Q73.07 13.66 73.87 14.5Q74.66 15.35 74.66 16.94V30.63Q74.66 32.2 73.89 33.06Q73.11 33.92 71.62 33.92ZM71.62 10.38Q69.97 10.38 69.07 9.58Q68.17 8.79 68.17 7.35Q68.17 5.88 69.07 5.1Q69.97 4.32 71.62 4.32Q73.3 4.32 74.19 5.1Q75.07 5.88 75.07 7.35Q75.07 8.79 74.19 9.58Q73.3 10.38 71.62 10.38Z" fill="var(--brand-b)"/><path d="M98.48 34.03Q95.29 34.03 92.91 32.77Q90.54 31.52 89.24 29.19Q87.94 26.87 87.94 23.72Q87.94 21.35 88.68 19.47Q89.41 17.59 90.79 16.27Q92.17 14.95 94.12 14.25Q96.07 13.55 98.48 13.55Q99.72 13.55 101.13 13.85Q102.54 14.15 103.9 14.86Q104.69 15.25 104.98 15.9Q105.28 16.54 105.19 17.25Q105.1 17.96 104.7 18.5Q104.29 19.05 103.65 19.22Q103.01 19.4 102.2 19Q101.44 18.58 100.62 18.37Q99.81 18.16 99.07 18.16Q97.87 18.16 96.96 18.54Q96.05 18.91 95.42 19.62Q94.79 20.32 94.46 21.36Q94.13 22.39 94.13 23.75Q94.13 26.39 95.42 27.91Q96.71 29.42 99.07 29.42Q99.81 29.42 100.61 29.23Q101.41 29.04 102.2 28.61Q103.01 28.21 103.64 28.4Q104.26 28.59 104.65 29.13Q105.05 29.68 105.11 30.38Q105.17 31.09 104.86 31.74Q104.55 32.38 103.79 32.74Q102.46 33.43 101.09 33.73Q99.72 34.03 98.48 34.03Z M110.76 33.95Q109.25 33.95 108.45 33.15Q107.66 32.36 107.66 30.87V16.68Q107.66 15.19 108.43 14.41Q109.2 13.63 110.61 13.63Q112.02 13.63 112.79 14.41Q113.55 15.19 113.55 16.68V18.76H113.15Q113.62 16.36 115.28 15.04Q116.93 13.72 119.54 13.55Q120.53 13.5 121.06 14.06Q121.6 14.62 121.66 15.96Q121.71 17.19 121.14 17.92Q120.57 18.64 119.2 18.79L118.3 18.87Q116.02 19.08 114.91 20.2Q113.8 21.33 113.8 23.43V30.87Q113.8 32.36 113.02 33.15Q112.25 33.95 110.76 33.95Z M132.81 34.03Q129.66 34.03 127.32 32.79Q124.98 31.55 123.68 29.23Q122.38 26.92 122.38 23.77Q122.38 21.4 123.12 19.52Q123.85 17.64 125.22 16.3Q126.6 14.95 128.52 14.25Q130.44 13.55 132.81 13.55Q135.98 13.55 138.31 14.79Q140.64 16.03 141.94 18.32Q143.24 20.62 143.24 23.77Q143.24 26.15 142.51 28.04Q141.77 29.93 140.4 31.28Q139.02 32.63 137.1 33.33Q135.18 34.03 132.81 34.03ZM132.81 29.51Q134.1 29.51 135.08 28.88Q136.05 28.26 136.61 26.99Q137.16 25.72 137.16 23.77Q137.16 20.84 135.95 19.45Q134.75 18.07 132.81 18.07Q131.53 18.07 130.55 18.68Q129.57 19.29 129.02 20.55Q128.46 21.82 128.46 23.77Q128.46 26.68 129.67 28.1Q130.87 29.51 132.81 29.51Z M154.05 34.03Q152.29 34.03 150.43 33.71Q148.56 33.39 147.06 32.63Q146.24 32.23 145.9 31.61Q145.56 31 145.6 30.35Q145.64 29.7 146.02 29.2Q146.39 28.69 147.02 28.5Q147.64 28.31 148.4 28.63Q150.03 29.32 151.4 29.6Q152.78 29.88 154.08 29.88Q155.78 29.88 156.58 29.33Q157.37 28.78 157.37 27.9Q157.37 27.13 156.85 26.73Q156.32 26.32 155.32 26.15L151.11 25.4Q148.63 24.94 147.3 23.58Q145.96 22.21 145.96 20.03Q145.96 18.04 147.08 16.59Q148.2 15.13 150.17 14.34Q152.15 13.55 154.7 13.55Q156.48 13.55 157.99 13.88Q159.5 14.21 160.93 14.94Q161.65 15.28 161.94 15.88Q162.23 16.47 162.13 17.12Q162.03 17.77 161.64 18.28Q161.25 18.79 160.62 18.96Q159.99 19.12 159.19 18.79Q157.91 18.21 156.82 17.95Q155.74 17.7 154.78 17.7Q152.97 17.7 152.16 18.26Q151.35 18.82 151.35 19.73Q151.35 20.39 151.81 20.85Q152.28 21.31 153.24 21.47L157.45 22.22Q160.04 22.68 161.4 23.98Q162.76 25.29 162.76 27.51Q162.76 30.58 160.38 32.3Q158 34.03 154.05 34.03Z M173.33 34.03Q171.57 34.03 169.71 33.71Q167.84 33.39 166.34 32.63Q165.52 32.23 165.18 31.61Q164.84 31 164.88 30.35Q164.92 29.7 165.3 29.2Q165.67 28.69 166.3 28.5Q166.92 28.31 167.68 28.63Q169.31 29.32 170.68 29.6Q172.06 29.88 173.36 29.88Q175.06 29.88 175.86 29.33Q176.65 28.78 176.65 27.9Q176.65 27.13 176.13 26.73Q175.6 26.32 174.6 26.15L170.39 25.4Q167.91 24.94 166.58 23.58Q165.24 22.21 165.24 20.03Q165.24 18.04 166.36 16.59Q167.48 15.13 169.45 14.34Q171.43 13.55 173.98 13.55Q175.76 13.55 177.27 13.88Q178.78 14.21 180.21 14.94Q180.93 15.28 181.22 15.88Q181.51 16.47 181.41 17.12Q181.31 17.77 180.92 18.28Q180.53 18.79 179.9 18.96Q179.27 19.12 178.47 18.79Q177.19 18.21 176.1 17.95Q175.02 17.7 174.06 17.7Q172.25 17.7 171.44 18.26Q170.63 18.82 170.63 19.73Q170.63 20.39 171.09 20.85Q171.56 21.31 172.52 21.47L176.73 22.22Q179.32 22.68 180.68 23.98Q182.04 25.29 182.04 27.51Q182.04 30.58 179.66 32.3Q177.28 34.03 173.33 34.03Z M188.1 33.92Q186.65 33.92 185.87 33.06Q185.1 32.2 185.1 30.63V16.94Q185.1 15.35 185.87 14.5Q186.65 13.66 188.1 13.66Q189.55 13.66 190.35 14.5Q191.14 15.35 191.14 16.94V30.63Q191.14 32.2 190.37 33.06Q189.59 33.92 188.1 33.92ZM188.1 10.38Q186.45 10.38 185.55 9.58Q184.65 8.79 184.65 7.35Q184.65 5.88 185.55 5.1Q186.45 4.32 188.1 4.32Q189.78 4.32 190.67 5.1Q191.55 5.88 191.55 7.35Q191.55 8.79 190.67 9.58Q189.78 10.38 188.1 10.38Z M198.42 33.95Q196.97 33.95 196.19 33.15Q195.42 32.36 195.42 30.87V16.68Q195.42 15.19 196.19 14.41Q196.96 13.63 198.37 13.63Q199.78 13.63 200.55 14.41Q201.31 15.19 201.31 16.68V18.97L200.87 17.66Q201.79 15.66 203.61 14.61Q205.43 13.55 207.74 13.55Q210.1 13.55 211.62 14.45Q213.14 15.35 213.9 17.18Q214.66 19.01 214.66 21.82V30.87Q214.66 32.36 213.89 33.15Q213.11 33.95 211.66 33.95Q210.21 33.95 209.42 33.15Q208.62 32.36 208.62 30.87V22.08Q208.62 20.04 207.88 19.13Q207.14 18.22 205.63 18.22Q203.73 18.22 202.59 19.43Q201.46 20.63 201.46 22.64V30.87Q201.46 33.95 198.42 33.95Z M228.25 41.23Q226.08 41.23 224.11 40.87Q222.14 40.51 220.61 39.81Q219.66 39.41 219.3 38.76Q218.93 38.1 218.99 37.4Q219.05 36.69 219.46 36.13Q219.86 35.57 220.51 35.34Q221.15 35.1 221.87 35.44Q223.63 36.23 225.14 36.47Q226.65 36.71 227.71 36.71Q230.29 36.71 231.57 35.55Q232.85 34.39 232.85 32.01V28.95H233.19Q232.58 30.82 230.71 31.96Q228.84 33.11 226.56 33.11Q223.93 33.11 221.96 31.89Q220 30.67 218.91 28.46Q217.82 26.25 217.82 23.32Q217.82 21.11 218.45 19.32Q219.08 17.52 220.22 16.24Q221.37 14.95 222.98 14.25Q224.6 13.55 226.56 13.55Q228.92 13.55 230.75 14.69Q232.57 15.83 233.14 17.67L232.75 18.98V16.68Q232.75 15.19 233.55 14.41Q234.34 13.63 235.75 13.63Q237.2 13.63 237.96 14.41Q238.73 15.19 238.73 16.68V31.31Q238.73 36.25 236.03 38.74Q233.34 41.23 228.25 41.23ZM228.34 28.59Q229.72 28.59 230.7 27.96Q231.69 27.33 232.24 26.15Q232.78 24.96 232.78 23.32Q232.78 20.85 231.58 19.46Q230.37 18.07 228.34 18.07Q226.98 18.07 225.99 18.7Q224.99 19.33 224.45 20.5Q223.9 21.67 223.9 23.32Q223.9 25.79 225.11 27.19Q226.31 28.59 228.34 28.59Z" fill="currentColor"/></svg>
+      <span class="sr-only">Kiwi Crossing</span>
     </a>
     <!-- BRAND:END -->
     <div class="tools">
@@ -471,12 +481,12 @@ html:has(body.story-open){overscroll-behavior:none}
 <!-- STORY:END -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="ios-hint install-card" id="install-wrap" role="region" aria-label="Install app" hidden>
-  <strong>Install Cross the Ditch</strong> on this device for one-tap, offline access.
+  <strong>Install Kiwi Crossing</strong> on this device for one-tap, offline access.
   <div class="install-actions"><button class="btn install-btn" id="btn-install" type="button">Install app</button></div>
   <button type="button" class="iconbtn x" id="btn-install-x" aria-label="Hide install offer">✕</button>
 </div>
 <div class="ios-hint" id="ios-hint" role="dialog" aria-label="Install on iPhone" hidden>
-  <strong>Install Cross the Ditch:</strong> tap <svg class="share" width="18" height="20" viewBox="0 0 18 22" aria-label="Share"><path d="M9 1v13M4.5 5.5 9 1l4.5 4.5M3 9H1.5v11.5h15V9H15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> <strong>Share</strong>, then <strong>Add to Home Screen</strong>.
+  <strong>Install Kiwi Crossing:</strong> tap <svg class="share" width="18" height="20" viewBox="0 0 18 22" aria-label="Share"><path d="M9 1v13M4.5 5.5 9 1l4.5 4.5M3 9H1.5v11.5h15V9H15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> <strong>Share</strong>, then <strong>Add to Home Screen</strong>.
   <button type="button" class="iconbtn x" id="ios-hint-x" aria-label="Dismiss install tip">✕</button>
 </div>
 <script>
@@ -518,7 +528,7 @@ const SRC = {
 const APP_DATA = {
   /* ---------------------------------------------------------------- META */
   meta: {
-    appName: "Cross the Ditch",
+    appName: "Kiwi Crossing",
     lastUpdated: DATA_DATE,
     source: "Compiled from official NZ and Australian government websites and market estimates. Placeholder values; verify before relying on them.",
   },
@@ -564,12 +574,35 @@ const APP_DATA = {
         { upTo: 18200, rate: 0 }, { upTo: 45000, rate: 0.15 }, { upTo: 135000, rate: 0.30 },
         { upTo: 190000, rate: 0.37 }, { upTo: null, rate: 0.45 }
       ], "ATO: Tax rates – Australian resident (ato.gov.au). The 15% rate applies from 1 July 2026 and is legislated to fall to 14% from 1 July 2027."),
-      medicareLevy: F(0.02, "ATO: Medicare levy 2% of taxable income (reduced for low incomes)."),
-      medicareLowThreshold: F(28011, "ATO: Medicare levy low-income threshold for singles (2025-26 figure; usually indexed each year)."),
       litoMax: F(700, "ATO: Low Income Tax Offset up to $700 (phases out between $37,500 and $66,667)."),
       superGuarantee: F(0.12, "ATO: Super guarantee is 12% of ordinary time earnings from 1 July 2025, paid by your employer on top of (or within) your salary."),
       superContribTax: F(0.15, "ATO: concessional (employer) super contributions are generally taxed at 15% inside the fund."),
-      medicareLevySurchargeSingle: F(101000, "ATO: Medicare levy surcharge income threshold for singles, 2025-26 (no private hospital cover). Indexed annually. Shown as a note only; not included in calculations."),
+    },
+    medicare: {
+      // Medicare levy, Medicare levy surcharge (MLS) and Lifetime Health Cover (LHC). Checked against ato.gov.au and privatehealth.gov.au on DATA_DATE.
+      levyRate: F(0.02, "ATO: Medicare levy – 2% of taxable income, on top of income tax (ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy)."),
+      phaseInRate: F(0.10, "ATO: Medicare levy reduction – between the lower and upper thresholds the levy is 10c for each $1 of income above the lower threshold."),
+      lowIncome: F({
+        single: { lower: 28011, upper: 35013 },
+        singleSenior: { lower: 44268, upper: 55335 },
+        family: { lower: 47238, upper: 59047 },
+        familySenior: { lower: 61623, upper: 77028 },
+        perChild: { lower: 4338, upper: 5423 },
+        year: "2025–26"
+      }, "ATO: Medicare levy reduction for low-income earners / based on family income, 2025–26 thresholds (latest published; the 2026–27 figures are usually announced in the Budget and indexed). 'Senior' = eligible for the seniors and pensioners tax offset (SAPTO)."),
+      mlsSingle: F([
+        { over: 0, rate: 0 }, { over: 105000, rate: 0.01 }, { over: 123000, rate: 0.0125 }, { over: 164000, rate: 0.015 }
+      ], "ATO: Medicare levy surcharge income, thresholds and rates – singles 2026–27: $105,000 or less 0%; $105,001–$123,000 1%; $123,001–$164,000 1.25%; $164,001+ 1.5%."),
+      mlsFamily: F([
+        { over: 0, rate: 0 }, { over: 210000, rate: 0.01 }, { over: 246000, rate: 0.0125 }, { over: 328000, rate: 0.015 }
+      ], "ATO: Medicare levy surcharge income, thresholds and rates – families (incl. couples and single parents) 2026–27: $210,000 or less 0%; $210,001–$246,000 1%; $246,001–$328,000 1.25%; $328,001+ 1.5%."),
+      mlsChildStep: F(1500, "ATO: family MLS thresholds rise by $1,500 for each MLS dependent child after the first."),
+      mlsYear: F("2026–27", "ATO: MLS thresholds year."),
+      mlsSpouseMin: F(27222, "ATO: if you have a spouse, you don't pay the surcharge if your own income for MLS purposes is $27,222 or less (2025–26 figure)."),
+      mlsExcess: F({ single: 750, family: 1500 }, "ATO: appropriate private patient hospital cover for MLS has an excess of $750 or less (singles) or $1,500 or less (couples/families). Extras-only, travel and overseas visitor cover don't count."),
+      lhc: F({ ratePerYear: 0.02, maxLoading: 0.70, freeAge: 30, removeAfterYears: 10, newArrivalMonths: 12 },
+        "privatehealth.gov.au: Lifetime Health Cover – 2% loading for every year you are aged over 30 when you first take out hospital cover, up to 70%, removed after 10 continuous years of cover. New migrants: your LHC base day is the later of 1 July following your 31st birthday or the first anniversary of the day you registered with Medicare for full benefits (reciprocal-agreement cover doesn't count)."),
+      hospitalCoverEstimate: F({ single: 1500, family: 3000 }, "Kiwi Crossing estimate only: rough yearly cost of a basic/bronze hospital policy that meets MLS rules, after the private health insurance rebate (AUD). Real prices vary widely by fund, state, age and excess – compare on privatehealth.gov.au."),
     },
     studentLoanOverseas: {
       // Overseas-based NZ student loan minimum annual repayment (NZD) by loan balance at 31 March.
@@ -840,6 +873,11 @@ const APP_DATA = {
     studyAssist:  { label: "Study Assist (HELP loans)", url: "https://www.studyassist.gov.au" },
     housingAus:   { label: "Housing Australia (Home Guarantee Scheme)", url: "https://www.housingaustralia.gov.au" },
     privateHealth:{ label: "privatehealth.gov.au", url: "https://www.privatehealth.gov.au" },
+    atoMedicare:  { label: "ATO: Medicare levy", url: "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy" },
+    atoMls:       { label: "ATO: Medicare levy surcharge", url: "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge" },
+    atoMlsRates:  { label: "ATO: MLS income thresholds and rates", url: "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge/medicare-levy-surcharge-income-thresholds-and-rates" },
+    lhc:          { label: "privatehealth.gov.au: Lifetime Health Cover", url: "https://www.privatehealth.gov.au/health_insurance/surcharges_incentives/lifetime_health_cover.htm" },
+    medicareNz:   { label: "Services Australia: enrolling in Medicare if you're a NZ citizen", url: "https://www.servicesaustralia.gov.au/enrolling-medicare-if-youre-new-zealand-citizen" },
     healthdirect: { label: "healthdirect (find a GP)", url: "https://www.healthdirect.gov.au" },
     startingBlocks:{ label: "Starting Blocks (childcare)", url: "https://www.startingblocks.gov.au" },
     moneysmart:   { label: "Moneysmart (budgeting, super)", url: "https://moneysmart.gov.au" },
@@ -882,6 +920,7 @@ function moneyShort(n, cur) {
   return sign + p + (a >= 10000 ? Math.round(a / 1000) + "k" : a >= 1000 ? (a / 1000).toFixed(1) + "k" : Math.round(a));
 }
 function pct(x, dp) { return (x * 100).toFixed(dp == null ? 0 : dp) + "%"; }
+function pctT(x) { return +(x * 100).toFixed(2) + "%"; }
 function getPath(o, p) { return p.split(".").reduce((a, k) => (a == null ? undefined : a[k]), o); }
 function setPath(o, p, v) { const ks = p.split("."); let a = o; for (let i = 0; i < ks.length - 1; i++) { if (a[ks[i]] == null) a[ks[i]] = {}; a = a[ks[i]]; } a[ks[ks.length - 1]] = v; }
 function link(l, text) { return `<a class="ext" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(text || l.label)}</a>`; }
@@ -965,7 +1004,7 @@ function freshState() {
       nzCity: "auckland", auCity: "brisbane", occupation: "", industry: "health", nzSalary: 85000,
       household: "single", kids: [], partnerSalary: 0, nonNzFamily: false,
       housing: "renting", pets: false, petCount: 1,
-      moveDate: toISO(addMonths(todayLocal(), 6)), reason: "money", jobOffer: false, offerSalary: "",
+      moveDate: toISO(addMonths(todayLocal(), 6)), reasons: [], reasonOther: "", jobOffer: false, offerSalary: "",
       kiwisaver: "", studentLoan: ""
     },
     fx: liveFx.status === "ok" ? liveFx.rate : V(APP_DATA.exchange.audToNzd), fxManual: false, currency: "NZD",
@@ -984,7 +1023,7 @@ function defaultTax() {
     nzBrackets: clone(V(T.nz.brackets)), accRate: V(T.nz.accLevyRate), accCap: V(T.nz.accLevyCap),
     ksEmp: V(T.nz.kiwiSaverEmployee), ksEr: V(T.nz.kiwiSaverEmployer),
     slRate: V(T.nz.studentLoanRate), slThreshold: V(T.nz.studentLoanThreshold),
-    auBrackets: clone(V(T.au.brackets)), medicare: V(T.au.medicareLevy), medLow: V(T.au.medicareLowThreshold),
+    auBrackets: clone(V(T.au.brackets)), medicare: V(T.medicare.levyRate), medLow: V(T.medicare.lowIncome).single.lower, medPhase: V(T.medicare.phaseInRate),
     lito: V(T.au.litoMax), sg: V(T.au.superGuarantee), superTax: V(T.au.superContribTax)
   };
 }
@@ -1079,9 +1118,32 @@ function auPerson(pkg) {
   const L = t.lito; let lito = 0;
   if (base <= 37500) lito = L; else if (base <= 45000) lito = L - (base - 37500) * 0.05; else if (base <= 66667) lito = Math.max(0, (L - 375) - (base - 45000) * 0.015);
   lito = Math.max(0, Math.min(lito, tax)); tax -= lito;
-  let med = 0; if (base > t.medLow) med = Math.min(base * t.medicare, (base - t.medLow) * 0.10);
+  const med = medicareLevyFor(base, t);
   const sup = base * t.sg;
   return { gross: base, pkg, tax, lito, med, superGross: sup, net: base - tax - med, retire: sup * (1 - t.superTax) };
+}
+/* Medicare levy for one person's taxable income (singles low-income reduction). Uses state.tax, which defaults to APP_DATA.tax.medicare. */
+function medicareLevyFor(income, t) {
+  t = t || state.tax; income = Math.max(0, num(income));
+  const phase = t.medPhase != null ? t.medPhase : V(T.medicare.phaseInRate);
+  if (income <= t.medLow) return 0;
+  return Math.min(income * t.medicare, (income - t.medLow) * phase);
+}
+/* Medicare levy surcharge check for the household (assumes no appropriate private hospital cover). */
+function mlsInfo() {
+  const M = T.medicare, hh = household();
+  const family = hh.partner || hh.nKids > 0;
+  const step = family ? Math.max(0, hh.nKids - 1) * V(M.mlsChildStep) : 0;
+  const tiers = (family ? V(M.mlsFamily) : V(M.mlsSingle)).map(x => ({ over: x.over ? x.over + step : 0, rate: x.rate }));
+  const sg = state.tax.sg, base = p => state.superIncluded ? p / (1 + sg) : p;
+  const own = base(auSalary()), partner = hh.partner ? base(auPartnerSalary()) : 0;
+  const income = own + partner;
+  let rate = 0; tiers.forEach(x => { if (income > x.over) rate = x.rate; });
+  const threshold = tiers[1].over;
+  // each person pays MLS on their own income; total for the household
+  const cost = rate * (own + (partner > V(M.mlsSpouseMin) ? partner : 0));
+  const cover = family ? V(M.hospitalCoverEstimate).family : V(M.hospitalCoverEstimate).single;
+  return { family, tiers, threshold, income, own, partner, rate, cost, cover, applies: rate > 0, step };
 }
 function autoAuSalary(nzd) { return Math.round(num(nzd) / (state.fx || 1) * (1 + state.uplift / 100) / 100) * 100; }
 function auSalaryAuto() { const I = state.intake; return (I.jobOffer && num(I.offerSalary) > 0) ? num(I.offerSalary) : autoAuSalary(I.nzSalary); }
@@ -1157,6 +1219,11 @@ function choices(path, current, opts, legend, o) {
   o = o || {};
   return `<fieldset><legend>${legend}</legend>${o.hint ? `<p class="hint muted small">${o.hint}</p>` : ""}<div class="choices">${opts.map((op, i) => `<label class="choice"><input type="radio" name="${path}" id="${path.replace(/\./g, "-")}-${i}" data-path="${path}" ${o.bool ? 'data-type="bool"' : ""} value="${esc(op.value)}" ${String(current) === String(op.value) ? "checked" : ""}><span>${op.label}${op.sub ? `<small>${op.sub}</small>` : ""}</span></label>`).join("")}</div></fieldset>`;
 }
+/* multi-select chips (checkboxes): the value at `path` is an array of the ticked option values; zero is fine */
+function multiChoices(path, current, opts, legend, o) {
+  o = o || {}; const cur = Array.isArray(current) ? current : [], base = path.replace(/\./g, "-"), hid = "hint-" + base;
+  return `<fieldset role="group" class="multi"${o.hint ? ` aria-describedby="${hid}"` : ""}><legend>${legend}</legend>${o.hint ? `<p class="hint muted small" id="${hid}">${o.hint}</p>` : ""}<div class="choices">${opts.map((op, i) => `<label class="choice"><input type="checkbox" name="${path}" id="${base}-${i}" data-path="${path}" data-type="list" value="${esc(op.value)}" ${cur.includes(op.value) ? "checked" : ""}><span>${op.label}${op.sub ? `<small>${op.sub}</small>` : ""}</span></label>`).join("")}</div></fieldset>`;
+}
 const nzCityOptions = () => Object.entries(APP_DATA.nzCities).map(([k, c]) => ({ value: k, label: c.label }));
 const auCityOptions = () => Object.entries(APP_DATA.states).map(([sk, s]) => ({ group: s.name, items: s.cities.map(ck => ({ value: ck, label: APP_DATA.auCities[ck].label + " (" + sk + ")" })) }));
 const industryOptions = () => Object.entries(APP_DATA.industries).map(([k, i]) => ({ value: k, label: i.label }));
@@ -1165,13 +1232,15 @@ function readInput(el) {
   const type = el.dataset.type || (el.type === "number" || el.type === "range" ? "number" : el.type === "checkbox" ? "bool" : "text");
   if (type === "number") { if (el.value === "") return el.dataset.nullable ? null : 0; let v = num(el.value); if (el.dataset.scale) v = v / num(el.dataset.scale); return v; }
   if (type === "bool") return el.type === "checkbox" ? el.checked : el.value === "true";
+  if (type === "list") { const scope = el.closest("fieldset") || document; return $$(`input[data-path="${el.dataset.path}"]`, scope).filter(x => x.checked).map(x => x.value); }
   return el.value;
 }
 function syncPath(path, except) {
   const v = getPath(state, path);
   $$(`[data-path="${path}"]`).forEach(el => {
     if (el === except) return;
-    if (el.type === "checkbox") el.checked = !!v;
+    if (el.dataset.type === "list") el.checked = Array.isArray(v) && v.includes(el.value);
+    else if (el.type === "checkbox") el.checked = !!v;
     else if (el.type === "radio") el.checked = String(v) === el.value;
     else if (document.activeElement !== el) el.value = fmtInputVal(v, el.dataset.scale ? num(el.dataset.scale) : 0);
   });
@@ -1206,7 +1275,7 @@ function afterEdit(path, el, isText) {
     if (!hh.partner) state.auPartnerManual = null;
   }
   if (path === "intake.auCity") state.stateTab = auStateKey();
-  if (path === "intake.reason" && !state.weightsTouched) setReasonWeights();
+  if (path === "intake.reasons" && !state.weightsTouched) setReasonWeights();
   if (path.startsWith("weights.")) state.weightsTouched = true;
   // 2. view refresh
   const v = state.view;
@@ -1216,7 +1285,8 @@ function afterEdit(path, el, isText) {
   else if (v === "should") refreshShould();
   else if (v === "states" && !isText) rerender("states");
 }
-function setReasonWeights() { state.weights = { money: 5, career: 5, family: 5, lifestyle: 5 }; if (state.weights[state.intake.reason] != null) state.weights[state.intake.reason] = 8; }
+/* every reason the user picked starts at 8/10 on the "Should I Go?" sliders; the rest start at 5 */
+function setReasonWeights() { const w = { money: 5, career: 5, family: 5, lifestyle: 5 }; reasonList().forEach(r => { if (w[r] != null) w[r] = 8; }); state.weights = w; }
 
 /* re-render a view but keep keyboard focus where it was */
 function rerender(view) {
@@ -1241,6 +1311,18 @@ const REASONS = [
   { value: "lifestyle", label: "Lifestyle", sub: "Climate, adventure, a fresh start" },
   { value: "other", label: "Other", sub: "Something else, or a mix" },
 ];
+/* reasons for moving: multi-select, zero or more (state.intake.reasons), plus optional free text for "Other" */
+const reasonList = () => (Array.isArray(state.intake.reasons) ? state.intake.reasons : []).filter(r => REASONS.some(x => x.value === r));
+const hasReason = k => reasonList().includes(k);
+const reasonOtherText = () => String(state.intake.reasonOther || "").trim().slice(0, 80);
+function reasonLabels(detail) { const o = reasonOtherText(); return reasonList().map(r => r === "other" && detail && o ? `Other (${o})` : REASONS.find(x => x.value === r).label); }
+const listJoin = a => a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+const reasonsText = detail => reasonLabels(detail).join(", ") || "None picked";
+function reasonFields(legend, hint) {
+  const I = state.intake;
+  return multiChoices("intake.reasons", I.reasons, REASONS, legend, { hint }) +
+    (hasReason("other") ? `<div class="field" style="margin-top:8px"><label for="in-reason-other">Your other reason <span class="muted small">(optional)</span></label><input type="text" id="in-reason-other" data-path="intake.reasonOther" maxlength="80" value="${esc(I.reasonOther)}" placeholder="e.g. Study, or a partner's job" autocomplete="off"></div>` : "");
+}
 const HOUSEHOLDS = [
   { value: "single", label: "Just me" }, { value: "couple", label: "Me + partner" },
   { value: "solokids", label: "Me + kids" }, { value: "family", label: "Me + partner + kids" },
@@ -1253,7 +1335,7 @@ function renderIntake() {
   <div class="card hero">
     <div>
       <h1 id="h-intake">Thinking of crossing the ditch?</h1>
-      <p>Cross the Ditch helps New Zealanders work out whether a move to Australia stacks up, and what to do (and when) if you go.</p>
+      <p>Kiwi Crossing helps New Zealanders work out whether a move across the ditch to Australia stacks up, and what to do (and when) if you go.</p>
       <ul>
         <li>Compare take-home pay and living costs for <em>your</em> situation</li>
         <li>Learn the rules for each Australian state and territory</li>
@@ -1319,7 +1401,7 @@ function intakeStep(s) {
       <div class="row" role="group" aria-label="Quick picks"><span class="small muted">Quick pick:</span>${[3, 6, 9, 12].map(m => `<button type="button" class="btn quiet sm" data-action="setMove" data-months="${m}">In ${m} months</button>`).join("")}</div>
       <p class="summary" style="margin-top:14px">${rel}</p>`;
     }
-    case 5: return choices("intake.reason", I.reason, REASONS, "What's the main reason you're thinking of moving?", { hint: "This sets the starting weights on the “Should I Go?” screen." });
+    case 5: return reasonFields("Why are you thinking of moving?", "Pick all that apply (or none). Your picks set the starting weights on the “Should I Go?” screen.");
     case 6: return `
       <p class="muted">Both optional. They personalise your plan and the cost comparison.</p>
       <div class="grid g2">
@@ -1333,7 +1415,7 @@ function intakeStep(s) {
         ["Household", `${esc(HOUSEHOLDS.find(h => h.value === I.household).label)}${hh.nKids ? ` · kids aged ${hh.kids.join(", ")}` : ""}${(hh.partner || hh.hasKids) && I.nonNzFamily ? " · non-NZ-citizen family member" : ""}`, 2],
         ["Home", `${I.housing === "owning" ? "Own" : "Rent"}${I.pets ? ` · ${num(I.petCount) || 1} pet(s)` : ""}`, 3],
         ["Move date", esc(fmtDate(parseISO(I.moveDate) || todayLocal())), 4],
-        ["Main reason", esc(REASONS.find(r => r.value === I.reason).label), 5],
+        ["Reasons", esc(reasonsText(true)), 5],
         ["Savings", `KiwiSaver: ${I.kiwisaver === "" || I.kiwisaver == null ? "not given" : money(num(I.kiwisaver), "NZD")} · Student loan: ${num(I.studentLoan) ? money(num(I.studentLoan), "NZD") : "none"}`, 6],
       ];
       return `<div class="review"><p>Check your answers. Everything can be changed later.</p><dl>${rows.map(r => `<dt>${r[0]}</dt><dd>${r[1]}</dd><dd><button type="button" class="btn quiet sm" data-action="step" data-step="${r[2]}" aria-label="Edit ${r[0]}">Edit</button></dd>`).join("")}</dl></div>`;
@@ -1410,7 +1492,7 @@ function renderCosts() {
       </tbody>
       <tfoot><tr><td>Total per month</td><td data-l="NZ total" id="tot-nz"></td><td data-l="Australia total" id="tot-au"></td><td class="num" data-l="Difference" id="tot-diff"></td></tr></tfoot>
     </table>
-    <p class="small muted" style="margin-top:8px">Health note: in Australia, if you earn over about ${money(V(T.au.medicareLevySurchargeSingle), "AUD")} (single) and don't have private hospital cover, you may pay an extra Medicare Levy Surcharge (1% to 1.5%). This isn't included above.</p>
+    <p class="small muted mls-note" id="mls-note" aria-live="polite" style="margin-top:8px">${mlsNoteHtml()}</p>
   </div>
 
   <div class="card" id="setup-card">
@@ -1474,8 +1556,15 @@ function taxEditor() {
     </div>
     <button type="button" class="btn quiet sm" data-action="resetTax">Reset tax assumptions</button>`;
 }
+function mlsNoteHtml() {
+  const x = mlsInfo(), M = T.medicare, who = x.family ? "family" : "single";
+  const lead = `<strong>Medicare levy surcharge:</strong> `;
+  if (x.applies) return lead + `your income for MLS purposes (about ${money(x.income, "AUD")}${x.family ? " combined" : ""}) is over the ${who} threshold of ${money(x.threshold, "AUD")} (${V(M.mlsYear)}). Without appropriate private hospital cover you'd pay about <strong>${money(x.cost, "AUD")} a year</strong> extra (${pctT(x.rate)}). A basic hospital policy costs roughly ${money(x.cover, "AUD")} a year (estimate), so cover is often the cheaper choice. The surcharge isn't included in the totals above. See Moving → Medicare levy &amp; surcharge.`;
+  return lead + `at about ${money(x.income, "AUD")}${x.family ? " combined" : ""} you're under the ${who} threshold of ${money(x.threshold, "AUD")} (${V(M.mlsYear)}), so no surcharge applies even without private hospital cover. The 2% Medicare levy is already included in your Australian take-home.`;
+}
 function refreshCosts() {
   if (!$("#cost-results")) return;
+  const mn = $("#mls-note"); if (mn) mn.innerHTML = mlsNoteHtml();
   const m = model(), cur = state.currency, fx = m.fx;
   // keep auto-calculated inputs in sync
   refreshFxLabel();
@@ -1636,9 +1725,69 @@ function renderStates() {
 /* =====================================================================================
    SCREEN 4: MOVING PROCESS EXPLAINER
    ===================================================================================== */
+/* "Medicare levy & surcharge" expandable section (Moving → 4). All figures come from APP_DATA.tax.medicare. */
+function medicareDetailsHtml() {
+  const M = T.medicare, L = APP_DATA.officialLinks, t = state.tax, hh = household();
+  const li = V(M.lowIncome), lhc = V(M.lhc), ex = V(M.mlsExcess), est = V(M.hospitalCoverEstimate);
+  const A = n => money(n, "AUD"), rate = pctT(t.medicare);
+  const tierRows = tiers => tiers.map((x, i) => { const nx = tiers[i + 1]; return `<tr><td>${x.over ? (nx ? `${A(x.over + 1)} – ${A(nx.over)}` : `${A(x.over + 1)} or more`) : `${A(tiers[1].over)} or less`}</td><td>${x.rate ? pctT(x.rate) : "0% (no surcharge)"}</td></tr>`; }).join("");
+  // worked example
+  const intakeSal = auSalary() > 0, sal = intakeSal ? auSalary() : 90000;
+  const p = auPerson(sal), base = p.gross, levy = p.med;
+  const upper = li.single.upper;
+  let levyLine;
+  if (base <= t.medLow) levyLine = `At a taxable income of about ${A(base)} you're under the low-income threshold (${A(t.medLow)}), so you'd pay <strong>no Medicare levy</strong>.`;
+  else if (levy < base * t.medicare - 0.5) levyLine = `At a taxable income of about ${A(base)} you're in the phase-in range, so your levy is reduced to about <strong>${A(levy)} a year</strong> (instead of ${A(base * t.medicare)}).`;
+  else levyLine = `Taxable income of about ${A(base)} × ${rate} = <strong>${A(levy)} a year</strong> (about ${A(levy / 12)} a month). It's taken out of your pay with your tax.`;
+  const x = mlsInfo();
+  const exIncome = intakeSal ? x.income : base + x.partner;
+  let tiers = x.tiers, mrate = 0; tiers.forEach(r => { if (exIncome > r.over) mrate = r.rate; });
+  const mcost = intakeSal ? x.cost : mrate * base;
+  const mlsLine = mrate > 0
+    ? `Your income for MLS purposes (about ${A(exIncome)}${x.family ? " combined" : ""}) is over the ${x.family ? "family" : "single"} threshold of ${A(x.threshold)}. Without appropriate hospital cover you'd pay the surcharge at <strong>${pctT(mrate)}: about ${A(mcost)} a year</strong> on top of the levy.`
+    : `Your income for MLS purposes (about ${A(exIncome)}${x.family ? " combined" : ""}) is <strong>under</strong> the ${x.family ? "family" : "single"} threshold of ${A(x.threshold)}, so <strong>no surcharge</strong> applies, with or without private cover.`;
+  const coverLine = mrate > 0
+    ? `Basic hospital cover: roughly <strong>${A(x.cover)} a year</strong> <span class="badge est">estimate</span>. ${x.cover < mcost ? "That's less than the surcharge, so cover is likely the cheaper choice (and you get the cover)." : "That's more than the surcharge on these numbers, so it's a closer call. Compare real quotes, and remember Lifetime Health Cover if you're 31 or older."}`
+    : `Basic hospital cover would cost roughly ${A(x.cover)} a year <span class="badge est">estimate</span>. It's optional for you on these numbers, but think about Lifetime Health Cover (below) if you're 31 or older.`;
+  return `<details id="mv-medicare" tabindex="-1">
+    <summary>Medicare levy &amp; surcharge</summary>
+    <h3>What the Medicare levy is</h3>
+    <p>The <strong>Medicare levy</strong> is an extra ${rate} of your <strong>taxable income</strong>, collected with your income tax. It helps fund Medicare, Australia's public health system. Most Australian residents for tax purposes pay it. New Zealanders living in Australia on the Special Category Visa are generally taxed as residents <strong>and</strong> can enrol in Medicare, so you'll usually pay the levy too. It's already included in the take-home pay in the Costs section.</p>
+    <h3>Low incomes pay less or nothing</h3>
+    <p>If your income is under the lower threshold, you pay no levy. Between the lower and upper thresholds it phases in at ${Math.round(V(M.phaseInRate) * 100)}c for each $1 over the lower threshold. Above the upper threshold you pay the full ${rate}. Families can use a higher, family-income threshold. Thresholds for ${esc(li.year)} (the latest the ATO has published):</p>
+    <div class="med-tbl"><table><thead><tr><th scope="col">Who</th><th scope="col">No levy up to</th><th scope="col">Full levy above</th></tr></thead><tbody>
+      <tr><td>Single</td><td>${A(li.single.lower)}</td><td>${A(li.single.upper)}</td></tr>
+      <tr><td>Family (couple or single parent)</td><td>${A(li.family.lower)}</td><td>${A(li.family.upper)}</td></tr>
+      <tr><td>Each dependent child adds</td><td>+${A(li.perChild.lower)}</td><td>+${A(li.perChild.upper)}</td></tr>
+      <tr><td>Single senior or pensioner*</td><td>${A(li.singleSenior.lower)}</td><td>${A(li.singleSenior.upper)}</td></tr>
+      <tr><td>Senior or pensioner family*</td><td>${A(li.familySenior.lower)}</td><td>${A(li.familySenior.upper)}</td></tr>
+    </tbody></table></div>
+    <p class="small muted">*If you're eligible for the seniors and pensioners tax offset (SAPTO). Thresholds usually rise each year.</p>
+    <h3>Who doesn't pay (exemptions)</h3>
+    <ul><li><strong>Not entitled to Medicare</strong>, for example some temporary visa holders. You need a Medicare Entitlement Statement from Services Australia, and any dependants must also be exempt.</li><li><strong>Foreign residents</strong> for tax purposes.</li><li>Some <strong>medical</strong> exemptions, such as certain defence, veterans' or blind pension cases.</li></ul>
+    <p class="small">Most Kiwis who move to live in Australia <strong>won't</strong> qualify, because they're entitled to Medicare. A partner or child on a temporary visa might be. Check the ATO page.</p>
+    <h3>The Medicare levy surcharge (MLS)</h3>
+    <p>This is a <strong>separate, extra</strong> 1% to 1.5% charged if your income is above a threshold and you (and your family) <strong>don't have appropriate private hospital cover</strong>. It's meant to nudge higher earners into private cover. You pay it for each day you're not covered. It's calculated on <em>income for MLS purposes</em>: taxable income plus things like reportable fringe benefits and super contributions you've salary-sacrificed. Thresholds for ${esc(V(M.mlsYear))}:</p>
+    <div class="med-tbl"><table><caption>Singles</caption><thead><tr><th scope="col">Income for MLS</th><th scope="col">Surcharge</th></tr></thead><tbody>${tierRows(V(M.mlsSingle))}</tbody></table></div>
+    <div class="med-tbl"><table><caption>Families (couples and single parents, combined income)</caption><thead><tr><th scope="col">Income for MLS</th><th scope="col">Surcharge</th></tr></thead><tbody>${tierRows(V(M.mlsFamily))}</tbody></table></div>
+    <ul><li>Family thresholds go up by <strong>${A(V(M.mlsChildStep))} for each dependent child after the first</strong>.</li><li>“Appropriate” cover means a hospital policy with an excess of ${A(ex.single)} or less (singles) or ${A(ex.family)} or less (couples and families). Extras-only, travel insurance and overseas visitor cover <strong>don't count</strong>.</li><li>If you have a partner and your own income is ${A(V(M.mlsSpouseMin))} or less, you don't pay the surcharge yourself.</li></ul>
+    <h3>Lifetime Health Cover (LHC) loading</h3>
+    <ul><li>If you take out hospital cover <strong>after</strong> your LHC deadline, you pay an extra <strong>${pctT(lhc.ratePerYear)} on your hospital premium for every year you're over ${lhc.freeAge}</strong>, up to ${pctT(lhc.maxLoading)}. For example, someone who first takes cover at 40 pays 20% more.</li><li>The loading is removed after ${lhc.removeAfterYears} years of continuous cover.</li><li><strong>New arrivals:</strong> your deadline (the “LHC base day”) is the <strong>later</strong> of 1 July after your 31st birthday, or the <strong>first anniversary of the day you register with Medicare</strong> for full benefits. So if you're 31 or older when you arrive, you have about <strong>${lhc.newArrivalMonths} months from Medicare registration</strong> to take out hospital cover with no loading.</li><li>Ask Services Australia for a letter showing your Medicare registration date, as your insurer may need it. Care you get under the NZ–Australia reciprocal agreement before enrolling doesn't count as registering.</li></ul>
+    <div class="med-example" id="med-example"><strong>Worked example${intakeSal ? ": your numbers" : " (example salary)"}</strong> <span class="badge est">estimate</span>
+      <ul><li>${intakeSal ? `Your Australian salary: ${A(sal)}${state.superIncluded ? " package including super" : ""}.` : `Using an example salary of ${A(sal)}. Add your salary in the intake to see your own numbers.`}</li>
+      <li><strong>Medicare levy:</strong> ${levyLine}</li>
+      <li><strong>Surcharge:</strong> ${mlsLine}</li>
+      <li>${coverLine}</li></ul>
+      <p class="small muted" style="margin:6px 0 0">Levy uses the single low-income rules. Hospital cover prices vary a lot by fund, state, age and excess; the estimate is ours, not an official figure.</p></div>
+    <h3>What to do</h3>
+    <ul class="med-todo"><li><strong>Enrol in Medicare</strong> soon after you arrive (online through myGov or with a form). NZ citizens need to show you'll live in Australia for 6 months or more.</li><li><strong>Keep your Medicare registration date</strong>, and ask Medicare for a letter confirming it.</li><li><strong>Decide on hospital cover before your LHC deadline</strong> if you're 31 or older: about ${lhc.newArrivalMonths} months after Medicare registration.</li><li>If your income is likely to be over the MLS threshold (${A(V(M.mlsSingle)[1].over)} single, ${A(V(M.mlsFamily)[1].over)} family), <strong>get appropriate hospital cover from day one</strong>. The surcharge counts every day you're not covered.</li><li>At tax time, include your private health insurance statement in your tax return.</li><li>Check these figures each 1 July, when they usually change.</li></ul>
+    <p class="links">${link(L.atoMedicare)} ${link(L.atoMls)} ${link(L.atoMlsRates)} ${link(L.lhc)} ${link(L.medicareNz)}</p>
+    <p class="muted src">Sources: ATO and privatehealth.gov.au, checked ${esc(niceDate(M.levyRate.lastUpdated))}. Levy thresholds: ${esc(li.year)}; surcharge thresholds: ${esc(V(M.mlsYear))}. General information only, not tax advice.</p>
+  </details>`;
+}
 function renderMoving() {
   const L = APP_DATA.officialLinks;
-  const toc = [["mv-scv", "The Special Category Visa"], ["mv-cit", "Citizenship & dual citizenship"], ["mv-fam", "Non-NZ partner or children"], ["mv-health", "Medicare & health"], ["mv-cl", "Centrelink & government support"], ["mv-loan", "NZ student loan"], ["mv-ks", "KiwiSaver vs super"], ["mv-tax", "Tax in two countries"], ["mv-surprise", "Things that surprise people"], ["mv-gloss", "Jargon buster"]];
+  const toc = [["mv-scv", "The Special Category Visa"], ["mv-cit", "Citizenship & dual citizenship"], ["mv-fam", "Non-NZ partner or children"], ["mv-health", "Medicare & health"], ["mv-medicare", "Medicare levy & surcharge"], ["mv-cl", "Centrelink & government support"], ["mv-loan", "NZ student loan"], ["mv-ks", "KiwiSaver vs super"], ["mv-tax", "Tax in two countries"], ["mv-surprise", "Things that surprise people"], ["mv-gloss", "Jargon buster"]];
   $("#view-moving").innerHTML = `
   <div class="pagehead"><h1 id="h-moving">How moving to Australia works</h1><p>The rules for New Zealanders, in plain English.</p></div>
   <div class="notice" role="note"><span aria-hidden="true">⚠️</span><div><strong>General information only, not migration, tax or legal advice.</strong> Verify with official sources or a registered migration agent/tax adviser. Rules change, often on 1 July each year. Last reviewed ${esc(niceDate(APP_DATA.meta.lastUpdated))}.</div></div>
@@ -1662,7 +1811,8 @@ function renderMoving() {
     <p class="links">${link(L.homeAffairs)}</p></section>
 
   <section class="card" id="mv-health" tabindex="-1"><h2>4. Medicare & health</h2>
-    <ul><li>NZ citizens living in Australia can <strong>enrol in Medicare</strong>, which covers public hospital care and subsidises GP visits. Enrol at a Services Australia centre with your passport and proof of address soon after you arrive.</li><li>Many GPs charge a “gap” above the Medicare rebate; others “bulk bill” (no charge). Ask when you book.</li><li><strong>Private health insurance</strong> is optional, but higher earners without hospital cover pay an extra <strong>Medicare Levy Surcharge</strong>. If you're 31 or older, the <strong>Lifetime Health Cover</strong> loading adds 2% to the premium for each year you delay. New arrivals generally have until 12 months after registering with Medicare to avoid it.</li><li>Bring prescriptions, a letter from your GP and your immunisation records (childcare and schools ask for them).</li></ul>
+    <ul><li>NZ citizens living in Australia can <strong>enrol in Medicare</strong>, which covers public hospital care and subsidises GP visits. Enrol at a Services Australia centre with your passport and proof of address soon after you arrive.</li><li>Many GPs charge a “gap” above the Medicare rebate; others “bulk bill” (no charge). Ask when you book.</li><li><strong>Private health insurance</strong> is optional, but higher earners without hospital cover pay an extra <strong>Medicare levy surcharge</strong>. If you're 31 or older, the <strong>Lifetime Health Cover</strong> loading adds 2% to the premium for each year you delay. New arrivals generally have until 12 months after registering with Medicare to avoid it. Details below.</li><li>Bring prescriptions, a letter from your GP and your immunisation records (childcare and schools ask for them).</li></ul>
+    ${medicareDetailsHtml()}
     <p class="links">${link(L.servicesAus)} ${link(L.privateHealth)} ${link(L.healthdirect)}</p></section>
 
   <section class="card" id="mv-cl" tabindex="-1"><h2>5. Centrelink & government support</h2>
@@ -1727,15 +1877,17 @@ function buildPlan() {
   const phase = (id, title, from, to, items) => P.push({ id, title, from, to, items: items.filter(Boolean) });
   const it = (id, date, title, desc, o) => Object.assign({ id, date, title, desc }, o || {});
   const d = n => addDays(M, n);
+  const mls = mlsInfo();
 
   phase("p6", "6 to 3 months before", addMonths(M, -6), addMonths(M, -3), [
     nonNz && it("visa-family", d(-180), "Start the visa for your non-NZ-citizen family member", "They need their own visa granted before travel (often the subclass 461; other options exist). This can take months, so start first.", { link: L.homeAffairs, tags: ["Family"], key: true }),
-    it("research", d(-178), `Research suburbs, commutes and rents in ${city}`, "Use the States screen. Short-list 3 to 4 suburbs, look at real listings and check travel times at peak hour.", { tags: [] }),
+    it("research", d(-178), `Research suburbs, commutes and rents in ${city}`, "Use the States screen. Short-list 3 to 4 suburbs, look at real listings and check travel times at peak hour." + (hasReason("lifestyle") ? " Lifestyle is one of your reasons, so check what matters to you there too: beaches, trails, sport, climate and the commute." : ""), { tags: hasReason("lifestyle") ? ["Lifestyle"] : [] }),
+    hasReason("family") && it("family-there", d(-176), "Talk to your family in Australia about the first few weeks", "You're moving towards family: ask whether you can stay with them while you look for a rental, and whether they can be a local referee or help with school and childcare tips.", { tags: ["Family"] }),
     I.jobOffer
       ? it("offer", d(-175), "Get your job offer confirmed in writing", "Check the salary, whether super is on top or included, the start date, relocation help and probation period.", { link: L.fairwork, tags: ["Work"] })
-      : it("jobsearch", d(-175), "Start your Australian job search", "Tailor your CV to the Australian format (no photo; include visa status: “NZ citizen, full work rights”). Apply and interview by video before you move if you can.", { link: L.workforce, tags: ["Work"] }),
+      : it("jobsearch", d(-175), "Start your Australian job search", "Tailor your CV to the Australian format (no photo; include visa status: “NZ citizen, full work rights”). Apply and interview by video before you move if you can." + (hasReason("career") ? " Career is one of your reasons, so start early and aim to have an offer before you resign." : ""), { link: L.workforce, tags: ["Work"], key: hasReason("career") || undefined }),
     it("registration", d(-170), "Check whether your job needs Australian registration or a licence", `Nurses, teachers, electricians, plumbers and other registered occupations usually need to register in ${stKey}. The Trans-Tasman Mutual Recognition Arrangement often helps.`, { tags: ["Work"] }),
-    it("budget", d(-165), "Build your budget and savings target", "Use the Costs screen. Aim to have your 'total cash to have ready' saved before you go.", { tags: ["Money"], internal: "costs" }),
+    it("budget", d(-165), "Build your budget and savings target", "Use the Costs screen. Aim to have your 'total cash to have ready' saved before you go." + (hasReason("money") ? " Money is one of your reasons, so re-check the monthly difference as real salary and rent figures come in." : ""), { tags: ["Money"], internal: "costs" }),
     it("passport", d(-160), hh.people > 1 ? "Check everyone's passport is valid" : "Check your passport is valid", "You'll travel on your NZ passport (it's how you get the SCV). Renew early if it expires soon.", { link: L.passports }),
     it("ird", d(-150), loan ? "Check your student loan and IRD obligations" : "Check your IRD obligations", loan ? `Your loan (${money(num(I.studentLoan), "NZD")}) will start charging interest once you're overseas-based (184+ days). Plan for minimum repayments of about ${money(studentLoan().osAnnualNzd, "NZD")} a year.` : "Note your IRD number and myIR login. You'll want to tell IRD when you leave and file a final return if needed.", { link: loan ? L.irdLoanOs : L.ird, tags: ["Money"] }),
     it("kiwisaver", d(-140), "Decide what to do with KiwiSaver", `${ks ? `Your balance (about ${money(ks, "NZD")}) ` : "Your KiwiSaver "}can stay in NZ or be transferred to an Australian super fund (trans-Tasman portability). You can't simply withdraw it because you moved to Australia.`, { link: L.kiwisaver, tags: ["Money"] }),
@@ -1771,7 +1923,7 @@ function buildPlan() {
     it("sim", d(1), "Get an Australian SIM or eSIM", "You'll need a local number for rental and job applications."),
     it("bank", d(2), "Open (or activate) an Australian bank account", "Bring your passport and address details."),
     it("tfn", d(2), "Apply for your TFN before your first payday", "Apply online through the ATO. Give it to your employer, or tax is taken at the top rate. It can take a couple of weeks to arrive.", { link: L.ato, key: true, tags: ["Money"] }),
-    it("medicare", d(3), "Enrol in Medicare", "At a Services Australia centre, with your passport and proof of address.", { link: L.servicesAus, tags: ["Health"] }),
+    it("medicare", d(3), "Enrol in Medicare", "Online through myGov, or with a form at a Services Australia centre. Bring your passport and proof you're living in Australia. Note your registration date: it starts your Lifetime Health Cover clock.", { link: L.medicareNz, tags: ["Health"] }),
     it("mygov", d(5), "Create a myGov account", "You'll link Medicare, the ATO and (if eligible) Centrelink to it.", { link: L.mygov }),
     it("temphousing", d(6), "Confirm your temporary housing and start inspecting rentals", "Extend your booking if needed, and line up inspections for this weekend."),
   ]);
@@ -1790,10 +1942,11 @@ function buildPlan() {
     it("gp", d(45), "Find a GP" + (kids ? " for the family" : ""), "Register, transfer your medical records and get any regular prescriptions sorted. Ask whether they bulk bill.", { link: L.healthdirect, tags: ["Health"] }),
     nonNz && it("family-rights", d(50), "Check your family member's visa conditions", "Confirm their work and study rights, Medicare eligibility and visa expiry date. Set a reminder well before it expires.", { link: L.homeAffairs, tags: ["Family"] }),
     it("community", d(60), "Build your community", "Join a sports club, team, church, parents' group or a local Kiwi community group. Say yes to invitations, even when you're tired."),
-    it("private-health", d(70), "Decide on private health insurance", "Think about the Medicare Levy Surcharge (higher earners) and the Lifetime Health Cover loading (31+). New arrivals generally have 12 months from Medicare registration.", { link: L.privateHealth, tags: ["Health"] }),
+    it("private-health", d(70), "Decide on private health insurance", (mls.applies ? `On your estimated income you'd pay the Medicare levy surcharge (about ${money(mls.cost, "AUD")} a year) without appropriate hospital cover, so sort cover early: the surcharge counts each day you're uncovered. ` : "On your estimated income the Medicare levy surcharge wouldn't apply, so hospital cover is optional. ") + "If you're 31 or older, Lifetime Health Cover adds a loading if you take out cover after your deadline (see Moving → Medicare levy & surcharge).", { link: L.privateHealth, tags: ["Health"] }),
     it("budget-review", d(85), "Do a budget review", "Compare your real spending with your Costs estimate, and adjust savings goals and your emergency buffer.", { tags: ["Money"], internal: "costs" }),
   ]);
   phase("y14", "Year 1 to Year 4", d(90), addYears(M, 4), [
+    it("lhc-deadline", addMonths(d(3), V(T.medicare.lhc).newArrivalMonths), "Lifetime Health Cover deadline (if you're 31 or older)", `About ${V(T.medicare.lhc).newArrivalMonths} months after you register with Medicare. If you're 31 or older and take out hospital cover after this date, you'll pay ${pctT(V(T.medicare.lhc).ratePerYear)} extra on premiums for every year you're over ${V(T.medicare.lhc).freeAge} (up to ${pctT(V(T.medicare.lhc).maxLoading)}). Your exact date is the later of this anniversary or 1 July after your 31st birthday. Under 31? You have until 1 July after you turn 31.`, { link: L.lhc, deadline: true, tags: ["Health"] }),
     it("nz-tax", new Date(nzYearEnd.getFullYear(), 4, 31), "Check your NZ tax assessment for the year you left", "NZ's tax year ends 31 March. Check myIR for your assessment and any refund or tax to pay.", { link: L.ird, tags: ["Money"] }),
     it("au-tax", taxDue, "Lodge your first Australian tax return", `For the year ending ${fmtShort(firstJune30)}. Returns are usually due by 31 October if you lodge yourself (a tax agent may get you more time). You'll do this every year.`, { link: L.ato, key: true, tags: ["Money"] }),
     loan && it("loan-repay", firstLoanDue, "First overseas student loan repayment (approx.)", `Minimum repayments are about ${money(studentLoan().osAnnualNzd, "NZD")} a year, paid in halves by 30 September and 31 March. Check your IRD assessment for exact dates.`, { link: L.irdLoanOs, tags: ["Money"] }),
@@ -1811,7 +1964,7 @@ function renderPlan() {
   const all = plan.phases.flatMap(p => p.items);
   const past = M < today;
   $("#view-plan").innerHTML = `
-  <div class="print-only"><h1>Cross the Ditch: my move plan</h1><p>${esc(nzCity().label)} → ${esc(auCity().label)} (${esc(auStateKey())}) · Move date ${esc(fmtDate(M))} · Printed ${esc(fmtShort(today))}</p><p><em>General information only, not migration, tax or legal advice. Verify with official sources or a registered migration agent/tax adviser. Dates are estimates.</em></p></div>
+  <div class="print-only"><h1>Kiwi Crossing: my move plan</h1><p>${esc(nzCity().label)} → ${esc(auCity().label)} (${esc(auStateKey())}) · Move date ${esc(fmtDate(M))}${reasonList().length ? ` · Reasons: ${esc(reasonsText(true))}` : ""} · Printed ${esc(fmtShort(today))}</p><p><em>General information only, not migration, tax or legal advice. Verify with official sources or a registered migration agent/tax adviser. Dates are estimates.</em></p></div>
   <div class="pagehead noprint"><h1 id="h-plan">My move plan</h1><p>A dated checklist from ${esc(nzCity().label)} to ${esc(auCity().label)}, built around your move date and answers. Tick things off as you go.</p></div>
   <div class="noprint">${estNotice("Dates are suggestions; deadlines come from state rules that can change.")}</div>
   <div class="card noprint">
@@ -1839,7 +1992,7 @@ function renderPlan() {
   ${plan.phases.map(p => `<section class="card phase" aria-labelledby="ph-${p.id}">
     <h3 id="ph-${p.id}">${esc(p.title)} <span class="range">${esc(fmtShort(p.from))} to ${esc(fmtShort(p.to))}</span></h3>
     <ul class="items">${p.items.map(x => planItem(x, today)).join("")}</ul></section>`).join("")}
-  <p class="small muted">Plan items: ${all.length}. Tailored to: ${[household().nKids ? "kids" : null, (household().partner || household().hasKids) && I.nonNzFamily ? "non-NZ-citizen family member" : null, I.jobOffer ? "job offer" : "no job offer yet", I.housing, I.pets ? "pets" : null, num(I.studentLoan) ? "student loan" : null].filter(Boolean).join(", ")}.</p>`;
+  <p class="small muted">Plan items: ${all.length}. Tailored to: ${[household().nKids ? "kids" : null, (household().partner || household().hasKids) && I.nonNzFamily ? "non-NZ-citizen family member" : null, I.jobOffer ? "job offer" : "no job offer yet", I.housing, I.pets ? "pets" : null, num(I.studentLoan) ? "student loan" : null, reasonList().length ? "your reasons (" + esc(reasonLabels(false).join(", ").toLowerCase()) + ")" : null].filter(Boolean).join(", ")}.</p>`;
   refreshPlanProgress();
 }
 function planItem(x, today) {
@@ -1862,7 +2015,7 @@ function refreshPlanProgress(el) {
 }
 function planText() {
   const plan = buildPlan();
-  let s = `CROSS THE DITCH: MY MOVE PLAN\n${nzCity().label} → ${auCity().label} (${auStateKey()})\nMove date: ${fmtDate(plan.M)}\nLicence conversion deadline: ${fmtDate(plan.licenceDeadline)}\nFirst Australian tax return due: ${fmtDate(plan.taxDue)}\nCitizenship eligibility (approx.): ${fmtDate(plan.citizenship)}\n`;
+  let s = `KIWI CROSSING: MY MOVE PLAN\n${nzCity().label} → ${auCity().label} (${auStateKey()})\nMove date: ${fmtDate(plan.M)}\n${reasonList().length ? `Reasons for moving: ${reasonsText(true)}\n` : ""}Licence conversion deadline: ${fmtDate(plan.licenceDeadline)}\nFirst Australian tax return due: ${fmtDate(plan.taxDue)}\nCitizenship eligibility (approx.): ${fmtDate(plan.citizenship)}\n`;
   plan.phases.forEach(p => { s += `\n== ${p.title.toUpperCase()} (${fmtShort(p.from)} to ${fmtShort(p.to)}) ==\n`; p.items.forEach(x => { s += `[${state.plan.done[x.id] ? "x" : " "}] ${fmtShort(x.date)}: ${x.title}\n    ${x.desc}${x.link ? `\n    ${x.link.url}` : ""}\n`; }); });
   s += `\nGeneral information only, not migration, tax or legal advice. Verify with official sources or a registered migration agent/tax adviser. Estimates last updated ${APP_DATA.meta.lastUpdated}.\n`;
   return s;
@@ -1895,17 +2048,17 @@ function autoSignals(m) {
   const dem = V(ind.demand); if (dem === "high") { c += 1; cw.push(`${ind.label} is in high demand.`); } else if (dem === "low") { c -= 1; cw.push(`${ind.label} demand is soft.`); }
   if (st.strongIndustries.includes(I.industry)) { c += 1; cw.push(`It's a strong sector in ${auStateKey()}.`); }
   if (I.industry === "public") { c -= 1; cw.push("Many federal roles need citizenship."); }
-  if (I.reason === "career" && !I.jobOffer) cw.push("Career is your main reason, so line up interviews first.");
+  if (hasReason("career") && !I.jobOffer) cw.push("Career is one of your reasons, so line up interviews first.");
   out.career = { s: clamp(c, -2, 2), why: cw.join(" ") };
   // family
   let f = -1; const fw = ["Most people leave family and friends behind in NZ."];
-  if (I.reason === "family") { f += 3; fw.push("You're moving towards family."); }
+  if (hasReason("family")) { f += 3; fw.push("You're moving towards family."); }
   if ((hh.partner || hh.hasKids) && I.nonNzFamily) { f -= 1; fw.push("A family member needs their own visa."); }
   if (hh.teens) { f -= 1; fw.push("Teenagers often find moving hardest."); }
   out.family = { s: clamp(f, -2, 2), why: fw.join(" ") };
   // lifestyle
   let l = 0; const lw = [];
-  if (I.reason === "lifestyle") { l += 1; lw.push("Lifestyle is a main reason for you."); }
+  if (hasReason("lifestyle")) { l += 1; lw.push("Lifestyle is one of your reasons."); }
   const rentRatio = (m.auN.rent || 1) / Math.max(1, m.nz.rent);
   if (rentRatio > 1.2) { l -= 1; lw.push(`Rent is ${Math.round((rentRatio - 1) * 100)}% higher, so you may get less home for the money.`); }
   else if (rentRatio < 0.95) { l += 1; lw.push("Rent is similar or lower."); }
@@ -1929,7 +2082,7 @@ function renderShould() {
   <div class="grid personas" id="personas" style="margin-bottom:16px"></div>
   <div class="card">
     <h2>What matters most to you?</h2>
-    <p class="small muted">Slide each priority from 0 (doesn't matter) to 10 (matters most). We started with your main reason weighted higher.</p>
+    <p class="small muted">Slide each priority from 0 (doesn't matter) to 10 (matters most). ${(() => { const k = reasonList().filter(r => K[r]).map(r => K[r][1].toLowerCase()); return k.length ? `We started ${listJoin(k)} higher because you picked ${k.length > 1 ? "them as reasons" : "it as a reason"} for moving.` : "They all start in the middle because you didn't pick a reason for moving (you can on the Start screen)."; })()}</p>
     <div class="grid g4">${Object.keys(K).map(k => `<div class="field"><label for="w-${k}">${K[k][0]} ${K[k][1]}: <span id="wv-${k}">${state.weights[k]}</span>/10</label><span class="hint">${K[k][2]}</span><input type="range" id="w-${k}" min="0" max="10" step="1" data-path="weights.${k}" value="${state.weights[k]}"></div>`).join("")}</div>
     <h3 style="margin-top:6px">How each factor looks for you</h3>
     <p class="small muted">Our rough read of each factor, from −2 (favours staying) to +2 (favours moving). Disagree? Change it.</p>
@@ -1961,11 +2114,12 @@ function refreshShould() {
     `Australian pay in ${esc(ind.label)} is often higher. We assumed ${Math.round(state.uplift)}% more after converting currency.`,
     `Employer super adds about ${showMoney(m.auN.retire)}/month to your retirement savings, vs ${showMoney(m.nz.retire)} in KiwiSaver.`,
     st.strongIndustries.includes(I.industry) ? `${esc(ind.label)} is one of ${esc(st.name)}'s strong sectors. ${esc(st.jobDemand)}` : `${esc(st.name)}'s big employers: ${esc(st.industries.slice(0, 4).join(", "))}. A bigger market means more options over time.`,
+    hasReason("career") ? `Career is one of your reasons, and ${esc(st.name)} is a bigger job market: more roles to step into and more room to change direction later.` : null,
     `After 4 years you can apply directly for Australian citizenship and keep your NZ passport too.`,
     esc(st.climate.split(":")[0].split(".")[0]) + ". " + esc(st.lifestyle.split(".")[0]) + ".",
   ];
   const homesick = [
-    I.reason === "family" ? "You're moving <em>towards</em> family, which is the strongest anchor there is. Belonging comes faster with your people nearby." : `Most of your people are in NZ. A return trip home for ${hh.people === 1 ? "you" : "the household"} costs about ${money(tripCost, "NZD")}, so budget for 1 to 2 trips a year.`,
+    hasReason("family") ? "You're moving <em>towards</em> family, which is the strongest anchor there is. Belonging comes faster with your people nearby." : `Most of your people are in NZ. A return trip home for ${hh.people === 1 ? "you" : "the household"} costs about ${money(tripCost, "NZD")}, so budget for 1 to 2 trips a year.`,
     `Time difference: ${esc(st.tz)}. Fine for weekend calls, harder for everyday chats.`,
     hh.nKids ? (hh.teens ? "Teenagers often find moving hardest: friends, school year and identity all change at once. Involve them early." : "Younger kids usually adapt fast, but they'll miss grandparents. Regular video calls help.") : "Your social life starts from zero. Clubs, teams and work friends make the difference.",
     (hh.partner || hh.hasKids) && I.nonNzFamily ? "Your family member will be on a different visa with fewer rights, which can feel unsettling. Get it sorted early." : null,
@@ -1974,6 +2128,8 @@ function refreshShould() {
   const skeptic = [
     `Is the pay rise real? Gross pay looks ${grossRaise >= 0 ? pct(grossRaise) + " higher" : pct(-grossRaise) + " lower"}, but after tax and costs the monthly difference is ${showMoney(m.diffNzd, true)}.`,
     `Rent alone is ${showMoney(m.auN.rent)} vs ${showMoney(m.nz.rent)} a month.`,
+    hasReason("money") && m.diffNzd < 0 ? "Money is one of your reasons, but on these numbers you'd have <em>less</em> left over each month. What would have to change?" : null,
+    hasReason("lifestyle") && !hasReason("money") && !hasReason("career") ? "If it's mostly about lifestyle, could a long holiday or a season in Australia give you most of it, without the move?" : null,
     be != null ? `To come out level with NZ, you'd need an Australian salary of about <strong>${money(be, "AUD")}</strong>${hh.partner ? " (with your partner's pay as entered)" : ""}. You've entered ${money(auSalary(), "AUD")}.` : "Even a very high salary wouldn't close the gap on these numbers. Check your inputs.",
     state.superIncluded ? "You've said the salary includes super, which is good: that's the honest comparison." : "Is the Australian figure 'plus super' or a package? If it includes super, take-home drops by about a tenth.",
     !I.jobOffer ? "Does that uplift hold for <em>your</em> job title? Check 5 real job ads before you believe it." : "Is the offer secure? Check the probation period and what happens if the role ends: there's no JobSeeker safety net.",
@@ -2004,6 +2160,7 @@ function refreshShould() {
     <div class="meter" aria-hidden="true"><div class="pin" style="left:${pos}%"></div></div>
     <div class="meter-labels" aria-hidden="true"><span>Stay</span><span>Try first</span><span>Move</span></div>
     <p style="margin-top:10px">Score <strong>${sc.score >= 0 ? "+" : ""}${sc.score.toFixed(2)}</strong> on a −2 to +2 scale. ${msg}</p>
+    ${hasReason("other") && reasonOtherText() ? `<p class="small">You also gave this reason: “${esc(reasonOtherText())}”. The score can't measure it, so give it its own weight.</p>` : ""}
     <div style="text-align:left;max-width:680px;margin:14px auto 0"><h3>Suggested low-risk ${tests.length > 1 ? "tests" : "test"}</h3><ul>${tests.map(t => `<li>${t}</li>`).join("")}</ul></div>`;
 }
 
@@ -2023,7 +2180,7 @@ function storyCards() {
   const hh = household();
   const c = [["nz", "Home now"], ["au", "Destination"], ["work", "Work"], ["salary", "Salary"], ["offer", "Job offer"], ["who", "Household"]];
   if (hh.partner || hh.hasKids) c.push(["family", "Family"]);
-  c.push(["home", "Home"], ["pets", "Pets"], ["when", "Timing"], ["why", "Reason"], ["money", "Savings"], ["review", "Review"], ["snap", "Snapshot"]);
+  c.push(["home", "Home"], ["pets", "Pets"], ["when", "Timing"], ["why", "Reasons"], ["money", "Savings"], ["review", "Review"], ["snap", "Snapshot"]);
   return c.map(([id, label]) => ({ id, label }));
 }
 function storyCardBody(id) {
@@ -2064,8 +2221,8 @@ function storyCardBody(id) {
         <div class="field"><label for="in-move">Or pick a date</label><input type="date" id="in-move" data-path="intake.moveDate" data-type="text" value="${esc(I.moveDate)}"></div>
         <p class="summary" aria-live="polite">${rel}</p>`;
     }
-    case "why": return Q("What's the main reason for the move?", "This sets the starting weights on the “Should I Go?” screen.") +
-      choices("intake.reason", I.reason, REASONS, srLegend("Main reason for moving"));
+    case "why": return Q("Why are you thinking of moving?", "") +
+      reasonFields(srLegend("Reasons for moving"), "Pick all that apply, or none. Your picks set the starting weights on the “Should I Go?” screen.");
     case "money": return Q("Any KiwiSaver or student loan?", "Both optional. They personalise your plan and the cost comparison.") +
       numField("intake.kiwisaver", I.kiwisaver === "" ? null : num(I.kiwisaver), { label: "KiwiSaver balance (NZD)", cur: "NZD", min: 0, step: 500, nullable: true, id: "in-ks", hint: "Helps with your keep-or-transfer decision." }) +
       numField("intake.studentLoan", I.studentLoan === "" ? null : num(I.studentLoan), { label: "NZ student loan balance (NZD)", cur: "NZD", min: 0, step: 500, nullable: true, id: "in-sl", hint: "Once you're overseas-based, interest is charged and minimum repayments apply." });
@@ -2089,14 +2246,15 @@ function snapshotData() {
     from: nzCity().label, to: auCity().label, st: auStateData().name, hh: hhLabel, people: hh.people,
     diff: same ? "About the same" : showMoney(d, true), diffNote: same ? "per month" : d > 0 ? `more left over per month in ${auCity().label}` : `less left over per month in ${auCity().label}`,
     setup: showMoney(m.setup.costsNzd), setupNote: "one-off moving costs",
-    start: fmtShort(start), startNote: `move date ${fmtShort(moveDate())}`, lean: sc.lean
+    start: fmtShort(start), startNote: `move date ${fmtShort(moveDate())}`, lean: sc.lean,
+    reasons: reasonLabels(true).map(r => r.length > 40 ? r.slice(0, 38) + "…)" : r).join(", ")
   };
 }
 const MARK_SVG = s => `<svg width="${s}" height="${s}" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="snapt${s}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#317363"/><stop offset="1" stop-color="#1C4A3F"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#snapt${s})"/><path d="M10 44.5c5 0 7-5 11-5s6 5 11 5 7-5 11-5 6 5 11 5" fill="none" stroke="#fff" stroke-width="4.6" stroke-linecap="round"/><circle cx="16.5" cy="31" r="4.2" fill="#e6cc98"/><circle cx="30" cy="24" r="5.3" fill="#e6cc98"/><circle cx="46" cy="20.5" r="6.8" fill="#e6cc98"/></svg>`;
 function snapshotHtml() {
   const s = snapshotData();
   return `<figure class="snap" id="snap-card" aria-label="Your move snapshot" style="margin:0">
-    <div class="snap-brand">${MARK_SVG(30)}<span>cross the ditch</span></div>
+    <div class="snap-brand">${MARK_SVG(30)}<span>kiwi crossing</span></div>
     <p class="snap-kicker">My move snapshot</p>
     <p class="snap-route">${esc(s.from)} → ${esc(s.to)}<small>${esc(s.st)} · ${esc(s.hh)}</small></p>
     <dl>
@@ -2105,6 +2263,7 @@ function snapshotHtml() {
       <div><dt>Setup cost</dt><dd>${s.setup}<small>${s.setupNote}</small></dd></div>
       <div><dt>Plan starts</dt><dd>${esc(s.start)}<small>${esc(s.startNote)}</small></dd></div>
     </dl>
+    ${s.reasons ? `<p class="snap-reasons" id="snap-reasons"><span>Reasons</span> ${esc(s.reasons)}</p>` : ""}
     <div class="snap-verdict"><span>Leaning towards</span><b id="snap-lean">${esc(s.lean)}</b></div>
     <p class="snap-foot">Estimates only, not financial, tax or migration advice.</p>
   </figure>`;
@@ -2129,7 +2288,7 @@ function snapshotPng() {
   x.strokeStyle = "#fff"; x.lineWidth = 4.6; x.lineCap = "round"; x.stroke(new Path2D("M10 44.5c5 0 7-5 11-5s6 5 11 5 7-5 11-5 6 5 11 5"));
   x.fillStyle = "#e6cc98"; [[16.5, 31, 4.2], [30, 24, 5.3], [46, 20.5, 6.8]].forEach(([cx, cy, r]) => { x.beginPath(); x.arc(cx, cy, r, 0, Math.PI * 2); x.fill(); });
   x.restore();
-  x.fillStyle = "#fff"; x.font = `800 46px ${FONT}`; x.textBaseline = "middle"; x.fillText("cross the ditch", 200, 128);
+  x.fillStyle = "#fff"; x.font = `800 46px ${FONT}`; x.textBaseline = "middle"; x.fillText("kiwi crossing", 200, 128);
   x.textBaseline = "alphabetic";
   // glass panel
   rr(60, 230, 960, 1000, 48); x.fillStyle = "rgba(255,255,255,.08)"; x.fill(); x.strokeStyle = "rgba(255,255,255,.22)"; x.lineWidth = 2; x.stroke();
@@ -2138,15 +2297,19 @@ function snapshotPng() {
   x.fillStyle = "rgba(255,255,255,.88)"; fit(`${s.st} · ${s.hh}`, 860, 600, 36); x.fillText(`${s.st} · ${s.hh}`, 110, 466);
   const cells = [["HOUSEHOLD", s.hh, `${s.people} ${s.people === 1 ? "person" : "people"}`], ["MONTHLY DIFFERENCE", s.diff, s.diffNote], ["SETUP COST", s.setup, s.setupNote], ["PLAN STARTS", s.start, s.startNote]];
   cells.forEach(([lab, val, note], k) => {
-    const cx = 110 + (k % 2) * 440, cy = 520 + Math.floor(k / 2) * 250;
-    rr(cx, cy, 420, 220, 30); x.fillStyle = "rgba(255,255,255,.07)"; x.fill(); x.strokeStyle = "rgba(255,255,255,.16)"; x.stroke();
-    x.fillStyle = "#f0dfb8"; x.font = `800 24px ${FONT}`; x.fillText(lab, cx + 30, cy + 56);
-    x.fillStyle = "#fff"; fit(val, 360, 800, 52); x.fillText(val, cx + 30, cy + 124);
-    x.fillStyle = "rgba(255,255,255,.86)"; fit(note, 360, 600, 26); x.fillText(note, cx + 30, cy + 172);
+    const cx = 110 + (k % 2) * 440, cy = 510 + Math.floor(k / 2) * 226;
+    rr(cx, cy, 420, 200, 30); x.fillStyle = "rgba(255,255,255,.07)"; x.fill(); x.strokeStyle = "rgba(255,255,255,.16)"; x.stroke();
+    x.fillStyle = "#f0dfb8"; x.font = `800 24px ${FONT}`; x.fillText(lab, cx + 30, cy + 52);
+    x.fillStyle = "#fff"; fit(val, 360, 800, 52); x.fillText(val, cx + 30, cy + 116);
+    x.fillStyle = "rgba(255,255,255,.86)"; fit(note, 360, 600, 26); x.fillText(note, cx + 30, cy + 162);
   });
-  rr(110, 1040, 860, 120, 30); x.fillStyle = "#e6cc98"; x.fill();
-  x.fillStyle = "#163d34"; x.font = `700 34px ${FONT}`; x.textBaseline = "middle"; x.fillText("Leaning towards", 150, 1100);
-  x.font = `800 54px ${FONT}`; x.textAlign = "right"; x.fillText(s.lean, 930, 1100); x.textAlign = "left"; x.textBaseline = "alphabetic";
+  if (s.reasons) {
+    x.fillStyle = "#f0dfb8"; x.font = `800 24px ${FONT}`; x.fillText("REASONS", 110, 1006); const lw = x.measureText("REASONS").width + 18;
+    x.fillStyle = "#fff"; fit(s.reasons, 860 - lw, 700, 34); x.fillText(s.reasons, 110 + lw, 1007);
+  }
+  rr(110, 1050, 860, 120, 30); x.fillStyle = "#e6cc98"; x.fill();
+  x.fillStyle = "#163d34"; x.font = `700 34px ${FONT}`; x.textBaseline = "middle"; x.fillText("Leaning towards", 150, 1110);
+  x.font = `800 54px ${FONT}`; x.textAlign = "right"; x.fillText(s.lean, 930, 1110); x.textAlign = "left"; x.textBaseline = "alphabetic";
   x.fillStyle = "rgba(255,255,255,.8)"; x.font = `600 24px ${FONT}`;
   x.fillText("Estimates only, not financial, tax or migration advice.", 80, 1290);
   x.textAlign = "right"; x.fillText(fmtShort(todayLocal()), 1000, 1290); x.textAlign = "left";
@@ -2155,11 +2318,11 @@ function snapshotPng() {
 async function snapSave() {
   const b = await snapshotPng(); if (!b) { toast("Sorry, couldn't create the image."); return; }
   const url = URL.createObjectURL(b), a = document.createElement("a");
-  a.href = url; a.download = "cross-the-ditch-snapshot.png"; document.body.appendChild(a); a.click(); a.remove();
+  a.href = url; a.download = "kiwi-crossing-snapshot.png"; document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 5000); toast("Snapshot image saved.");
 }
 async function snapShare() {
-  try { const b = await snapshotPng(); await navigator.share({ files: [new File([b], "cross-the-ditch-snapshot.png", { type: "image/png" })], title: "My move snapshot" }); }
+  try { const b = await snapshotPng(); await navigator.share({ files: [new File([b], "kiwi-crossing-snapshot.png", { type: "image/png" })], title: "My move snapshot" }); }
   catch (e) { if (e && e.name !== "AbortError") snapSave(); }
 }
 
@@ -2171,7 +2334,7 @@ function renderIntake() {
   <div class="card hero">
     <div>
       <h1 id="h-intake">Thinking of crossing the ditch?</h1>
-      <p>Cross the Ditch helps New Zealanders work out whether a move to Australia stacks up, and what to do (and when) if you go.</p>
+      <p>Kiwi Crossing helps New Zealanders work out whether a move across the ditch to Australia stacks up, and what to do (and when) if you go.</p>
       <ul>
         <li>Compare take-home pay and living costs for <em>your</em> situation</li>
         <li>Learn the rules for each Australian state and territory</li>
@@ -2323,7 +2486,7 @@ function go(view, focus) {
   $$("nav.main a").forEach(a => { if (a.dataset.nav === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   const navA = $(`nav.main a[data-nav="${view}"]`); if (navA && navA.scrollIntoView) navA.scrollIntoView({ block: "nearest", inline: "nearest" });
   if (focus) { window.scrollTo(0, 0); const h = $("#view-" + view + " h1:not(.print-only h1)") || $("#view-" + view + " h1"); if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); } }
-  document.title = ({ intake: "Start", costs: "Costs", states: "States", moving: "Moving", plan: "My Plan", should: "Should I Go?" }[view]) + " · Cross the Ditch";
+  document.title = ({ intake: "Start", costs: "Costs", states: "States", moving: "Moving", plan: "My Plan", should: "Should I Go?" }[view]) + " · Kiwi Crossing";
 }
 function navigate(view) { if (location.hash.slice(1) === view) go(view, true); else location.hash = view; }
 window.addEventListener("hashchange", () => go(location.hash.slice(1) || "intake", true));
@@ -2354,7 +2517,7 @@ document.addEventListener("click", e => {
     case "resetTax": state.tax = defaultTax(); rerender("costs"); toast("Tax assumptions reset."); break;
     case "stateTab": state.stateTab = b.dataset.state; renderStates(); $(`#tab-${state.stateTab}`).focus(); break;
     case "pickState": { const sk = b.dataset.state; state.intake.auCity = APP_DATA.states[sk].cities[0]; state.stateTab = sk; applyDefaults(["au", "setup"]); renderStates(); toast(`Target city set to ${auCity().label}.`); break; }
-    case "scrollTo": { const t = document.getElementById(b.dataset.target); if (t) { t.scrollIntoView({ behavior: "smooth", block: "start" }); t.focus({ preventScroll: true }); } break; }
+    case "scrollTo": { const t = document.getElementById(b.dataset.target); if (t) { if (t.tagName === "DETAILS") t.open = true; t.scrollIntoView({ behavior: "smooth", block: "start" }); t.focus({ preventScroll: true }); } break; }
     case "print": window.print(); break;
     case "copyPlan": copyText(planText()).then(ok => toast(ok ? "Plan copied to clipboard." : "Couldn't copy automatically. Try Print / save as PDF instead.")); break;
     case "sigAuto": delete state.signalOverride[b.dataset.k]; refreshShould(); break;
@@ -2415,11 +2578,11 @@ loadLiveFx(false);   // fetch the live AUD→NZD rate; falls back to APP_DATA.ex
   window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; if (!standalone) wrap.hidden = false; });
   $("#btn-install").addEventListener("click", async () => {
     if (!deferred) return; wrap.hidden = true; deferred.prompt();
-    try { const c = await deferred.userChoice; if (c && c.outcome === "accepted") toast("Installing Cross the Ditch…"); } catch (e) { /* ignore */ }
+    try { const c = await deferred.userChoice; if (c && c.outcome === "accepted") toast("Installing Kiwi Crossing…"); } catch (e) { /* ignore */ }
     deferred = null;
   });
   $("#btn-install-x").addEventListener("click", () => { wrap.hidden = true; });
-  window.addEventListener("appinstalled", () => { wrap.hidden = true; deferred = null; toast("Cross the Ditch is installed. Find it on your home screen."); });
+  window.addEventListener("appinstalled", () => { wrap.hidden = true; deferred = null; toast("Kiwi Crossing is installed. Find it on your home screen."); });
   // 3. iPhone / iPad Safari: show the Share → Add to Home Screen tip
   const ua = navigator.userAgent || "";
   const iOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
