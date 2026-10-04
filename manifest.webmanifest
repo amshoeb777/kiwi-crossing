@@ -1,0 +1,71 @@
+{
+  "name": "Cross the Ditch",
+  "short_name": "Cross Ditch",
+  "description": "Plan a move from New Zealand to Australia: compare take-home pay and living costs, learn each state's rules, and get a dated moving checklist.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#f6f3ec",
+  "theme_color": "#22584a",
+  "lang": "en-NZ",
+  "dir": "ltr",
+  "categories": [
+    "finance",
+    "lifestyle",
+    "travel",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/mobile.png",
+      "sizes": "780x1688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Compare take-home pay and living costs"
+    },
+    {
+      "src": "screenshots/desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Cost of living comparison"
+    }
+  ]
+}
